@@ -1,0 +1,30 @@
+# Muhit va maxfiy ma'lumotlar
+.env
+.env.local
+
+# Python va virtual muhit
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Ma'lumotlar bazasi
+*.db
+*.sqlite3
+
+# Vaqtinchalik fayllar va yuklanmalar
+downloads/
+temp/
+*.mp4
+*.mp3
+*.m4a
+
+# Log fayllar
+logs/
+*.log
+
+# IDE sozlamalari
+.vscode/
+.idea/

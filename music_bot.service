@@ -1,0 +1,17 @@
+[Unit]
+Description=Instagram Music Downloader Telegram Bot (aiogram 3.x)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+# Quyidagi yo'llarni serveringizdagi loyiha joylashuviga moslashtiring:
+WorkingDirectory=/root/music_bot
+ExecStart=/root/music_bot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/root/music_bot/bot.log
+StandardError=append:/root/music_bot/bot.log
+
+[Install]
+WantedBy=multi-user.target
