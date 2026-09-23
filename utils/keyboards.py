@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import SUPPORT_URL, SUPPORT_USERNAME
 
-def get_start_keyboard(bot_username: str = "dustlarlarlarlarlar_bot") -> InlineKeyboardMarkup:
+def get_start_keyboard(bot_username: str = "dustlar_lar_lar_lar_bot") -> InlineKeyboardMarkup:
     """/start komandasi uchun inline tugmalar (Do'stlarga ulashish bilan)"""
     share_url = f"https://t.me/share/url?url=https://t.me/{bot_username}&text=Instagramdan%20video%20va%20musiqalarni%20oson%20yuklab%20oluvchi%20bot!"
     return InlineKeyboardMarkup(
@@ -16,7 +16,7 @@ def get_start_keyboard(bot_username: str = "dustlarlarlarlarlar_bot") -> InlineK
         ]
     )
 
-def get_video_audio_offer_keyboard(token: str, bot_username: str = "dustlarlarlarlarlar_bot") -> InlineKeyboardMarkup:
+def get_video_audio_offer_keyboard(token: str, bot_username: str = "dustlar_lar_lar_lar_bot") -> InlineKeyboardMarkup:
     """Video yuborilgandan so'ng audio kerakligini so'rash tugmalari"""
     share_url = f"https://t.me/share/url?url=https://t.me/{bot_username}&text=Instagramdan%20video%20va%20musiqalarni%20oson%20yuklab%20oluvchi%20bot!"
     return InlineKeyboardMarkup(
