@@ -125,3 +125,31 @@ function matchSearch(product, query) {
 
   return false;
 }
+
+/**
+ * Sayt havolasini nusxalash yoki Telegram orqali do'stlarga yuborish
+ */
+function shareSite() {
+  const currentUrl = window.location.href;
+  const shareText = "UzTech PC Market — Yangi va ishlatilgan kompyuterlar, noutbuklar va ehtiyot qismlar do'koni:";
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'UzTech PC Market',
+      text: shareText,
+      url: currentUrl
+    }).catch(() => {});
+  } else {
+    const tgUrl = `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareText)}`;
+    window.open(tgUrl, '_blank');
+  }
+}
+
+function copySiteLink() {
+  const currentUrl = window.location.href;
+  navigator.clipboard.writeText(currentUrl).then(() => {
+    showToast("Havola (silka) nusxalandi! Do'stlaringizga yuborishingiz mumkin.", "success");
+  }).catch(() => {
+    prompt("Ushbu havolani nusxalab do'stlaringizga yuboring:", currentUrl);
+  });
+}
