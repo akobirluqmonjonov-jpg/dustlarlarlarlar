@@ -1,0 +1,292 @@
+/* ===================================================================
+   UzTech PC Market - Moslashuvchanlik Stili (responsive.css)
+   Mobile, Planshet va Katta ekranlar uchun qulay interfeys
+   =================================================================== */
+
+/* Mobil pastki boshqaruv paneli (Bottom Navigation Bar) */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-color);
+  z-index: 950;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.mobile-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 600;
+  position: relative;
+  flex: 1;
+  padding: 6px 0;
+}
+
+.mobile-nav-btn.active {
+  color: var(--accent);
+}
+
+.mobile-nav-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.mobile-badge {
+  position: absolute;
+  top: 2px;
+  right: 25%;
+  background: var(--rose);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+/* Mobil Menyu Drawer */
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #FFFFFF;
+  z-index: 10005;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  padding: 20px;
+  background: var(--primary);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 16px 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.mobile-menu-item {
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.mobile-menu-link:hover, .mobile-menu-link.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10004;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-btn {
+  display: none;
+  font-size: 24px;
+  color: var(--primary);
+  padding: 8px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    display: none;
+  }
+
+  .trust-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-sidebar {
+    position: static;
+    margin-bottom: 24px;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 64px; /* Bottom nav uchun joy */
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .main-header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .search-container {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .category-navbar {
+    display: none; /* Mobilda pastki menyu va drawer orqali navigatsiya */
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .header-actions .action-btn {
+    display: none; /* Mobilda pastki panelda bor */
+  }
+
+  .header-actions .btn-admin-pill {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    padding: 28px 20px;
+    margin-top: 14px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .trust-features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .card-media {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    height: 36px;
+  }
+
+  .card-specs {
+    display: none; /* Mobilda joy tejash */
+  }
+
+  .current-price {
+    font-size: 15px;
+  }
+
+  .card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-card-buy {
+    display: none; /* Faqat savatga tugmasi qoladi */
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .detail-modal-body {
+    padding: 20px 16px;
+  }
+
+  .cart-drawer {
+    width: 100%;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
