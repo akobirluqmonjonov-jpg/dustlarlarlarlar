@@ -1181,3 +1181,90 @@ const INITIAL_CREDIT_APPLICATIONS = [
     comment: "Pasport va plastik karta aylanmasi mavjud."
   }
 ];
+
+// O'zbekistondagi kompyuterlar bozori va sotuviga oid dolzarb yangiliklar
+const NEWS_ARTICLES = [
+  {
+    id: "news-1",
+    title: "2026-yilda O'zbekistonda o'yin kompyuterini yig'ish qanchaga tushadi? (RTX 4060 vs RTX 4070)",
+    date: "25-Sentyabr, 2026",
+    tag: "Bozor Narxlari & Tahlil",
+    tagColor: "#2563EB",
+    image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    summary: "Toshkent va Malika bozoridagi joriy narxlar tahlili: 1080p, 2K va 4K o'yinlar uchun maqbul konfiguratsiyalar hamda so'mdagi hisob-kitoblar.",
+    content: `
+      <p>Bugungi kunda O'zbekiston kompyuter bozorida grafik kartalar va protsessorlar narxi barqarorlashdi. CS2, Cyberpunk 2077, Dota 2 va GTA 5 kabi o'yinlarni yuqori FPS bilan o'ynash uchun quyidagi ikki xil variant tavsiya etiladi:</p>
+      <br>
+      <h4>1. Optimal Gaming Yig'uv (10-12 mln so'm):</h4>
+      <p>Intel Core i5-13400F yoki Ryzen 5 7500F, 16GB DDR4/DDR5 xotira, 1TB NVMe SSD va <strong>NVIDIA GeForce RTX 4060 8GB</strong> videokartasi. Bu yig'uv barcha o'yinlarni Full HD 1080p da 100+ FPS bilan bemalol ko'taradi.</p>
+      <br>
+      <h4>2. Flagman 2K/4K Gaming Yig'uv (20-25 mln so'm):</h4>
+      <p>Intel Core i7-14700KF, 32GB DDR5 6000MHz, RTX 4070 Ti Super 16GB va suyuqlik sovutgichi. Ushbu kompyuter nafaqat maksimal o'yinlar, balki og'ir 3D rendering va professional montaj uchun ham mo'ljallangan.</p>
+      <br>
+      <p>UzTech do'konimizda barcha yangi kompyuterlar 24 oylik rasmiy kafolat bilan taqdim etiladi.</p>
+    `
+  },
+  {
+    id: "news-2",
+    title: "Ishlatilgan (B/U) kompyuter va videokartalarni sotib olishda 5 ta oltin qoida",
+    date: "22-Sentyabr, 2026",
+    tag: "Mutaxassis Maslahati",
+    tagColor: "#D97706",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    summary: "Mayningda qizib ketgan videokartalar, qayta qizdirilgan chiplar va SSD xotira salomatligini aniqlash bo'yicha amaliy qo'llanma.",
+    content: `
+      <p>Ishlatilgan kompyuter yoki qismlar yangisiga nisbatan 40-50% arzonroq turadi. Lekin pulingiz havoga uchmasligi uchun quyidagi sinovlarni o'tkazish shart:</p>
+      <br>
+      <ul>
+        <li><strong>1. FurMark Stress-Test:</strong> Videokartani 15-20 daqiqa yuklama ostida tekshiring. Harorat 75 darajadan oshmasligi va ekranda qora nuqtalar (artefakt) chiqmasligi kerak.</li>
+        <li><strong>2. CrystalDiskInfo / Hard Disk Sentinel:</strong> SSD va HDD disklarning 'Health' (salomatlik) holati kamida 95-100% bo'lishi lozim.</li>
+        <li><strong>3. AIDA64 va CPU-Z:</strong> Protsessor chastotasi pasayib ketmasligi (trottling bo'lmasligi) tekshiriladi.</li>
+        <li><strong>4. Zavod plombasi:</strong> Videokarta orqasidagi zavod plombasi butunligi uning ilgari ta'mirlanmaganidan darak beradi.</li>
+        <li><strong>5. Do'kon kafolati:</strong> Ishlatilgan texnika olganda kamida 1 oydan 3 oygacha rasmiy tekshirish kafolati beruvchi ishonchli do'konlarni tanlang.</li>
+      </ul>
+      <br>
+      <p>UzTech PC Market mutaxassislari har bir ishlatilgan kompyuterni sotuvga qo'yishdan oldin 100% tekshirib, yangi termopasta bilan ta'minlaydi.</p>
+    `
+  },
+  {
+    id: "news-3",
+    title: "O'zbekistonda muddatli to'lov (kreditga) kompyuter olish shartlari osonlashdi",
+    date: "18-Sentyabr, 2026",
+    tag: "Kredit & Moliya",
+    tagColor: "#7C3AED",
+    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80",
+    summary: "Boshlang'ich to'lovsiz, ortiqcha hujjatlarsiz, faqatgina pasport va karta aylanmasi orqali 3 oydan 24 oygacha qulay kreditga ega bo'lish.",
+    content: `
+      <p>Endilikda o'qish, ish yoki o'yin uchun kerak bo'lgan sifatli kompyuter va noutbuklarni birdaniga katta pul to'lamasdan, bo'lib to'lashga xarid qilish mumkin.</p>
+      <br>
+      <h4>Kredit olish talablari:</h4>
+      <ul>
+        <li>O'zbekiston Respublikasi fuqarolik pasporti yoki ID-karta;</li>
+        <li>Oxirgi 6 oylik rasmiy daromad yoki muntazam aylanmaga ega plastik karta;</li>
+        <li>18 yoshdan yuqori bo'lish.</li>
+      </ul>
+      <br>
+      <p>Saytimizdagi <strong>Kredit Kalkulyatori</strong> orqali oylik to'lovni oldindan bilib olib, onlayn ariza qoldirishingiz mumkin. Arizalar 15 daqiqada ko'rib chiqiladi.</p>
+    `
+  },
+  {
+    id: "news-4",
+    title: "IT dasturchilar, dizaynerlar va talabalar uchun 2026-yilgi eng zo'r noutbuklar",
+    date: "14-Sentyabr, 2026",
+    tag: "Noutbuklar",
+    tagColor: "#059669",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+    summary: "Lenovo ThinkPad, HP EliteBook hamda Apple MacBook Air modellari o'rtasidagi batafsil taqqoslash va amaliy tavsiyalar.",
+    content: `
+      <p>Noutbuk tanlashda eng muhim uchta jihat: protsessor quvvati, ekran sifati (IPS panel, ko'zni charchatmaslik) va batareya chidamliligi hisoblanadi.</p>
+      <br>
+      <h4>Biz tavsiya etadigan yetakchi modellar:</h4>
+      <ul>
+        <li><strong>Apple MacBook Air M2 (13.6 dyuym):</strong> 18 soatlik batareya, yengil vazn (1.24 kg) va ajoyib Retina ekran. Frontend, dizayn va mobil dasturchilar uchun eng qulay tanlov.</li>
+        <li><strong>Lenovo ThinkPad T480 (B/U):</strong> Byudjetli va chidamli. Qulay klaviatura, ikkita batareya va oson kengaytiriluvchi 16GB RAM.</li>
+        <li><strong>ASUS TUF Gaming A15:</strong> 3D modellashtirish, arxitektura va o'yinlar uchun RTX 4050 videokartali kuchli statsionar noutbuk.</li>
+      </ul>
+    `
+  }
+];
+

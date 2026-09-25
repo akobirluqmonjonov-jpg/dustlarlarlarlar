@@ -143,6 +143,9 @@ class App {
       case 'savat':
         this.renderCartView();
         break;
+      case 'yangiliklar':
+        this.renderNewsView();
+        break;
       case 'search':
         this.renderSearchView();
         break;
@@ -336,6 +339,41 @@ class App {
           </div>
           <div class="products-grid">
             ${bestSellers.map(p => this.renderProductCard(p, currency)).join('')}
+          </div>
+        </section>
+
+        <!-- 9. YANGILIKLAR VA MASLAHATLAR -->
+        <section class="section-block">
+          <div class="section-header">
+            <div class="section-title-group">
+              <span class="section-badge-small" style="color: #2563EB;">Bozor Yangiliklari & Qo'llanmalar</span>
+              <h2 class="section-title">📰 O'zbekiston Kompyuter Bozori Yangiliklari</h2>
+            </div>
+            <a href="#yangiliklar" class="section-view-all">Barcha maqolalar &rarr;</a>
+          </div>
+          <div class="news-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+            ${(typeof NEWS_ARTICLES !== 'undefined' ? NEWS_ARTICLES : []).map(n => `
+              <div class="news-card" onclick="app.openNewsModal('${n.id}')" style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-sm);">
+                <div style="height: 180px; overflow: hidden; position: relative;">
+                  <img src="${n.image}" alt="${escapeHtml(n.title)}" style="width: 100%; height: 100%; object-fit: cover;">
+                  <span style="position: absolute; top: 12px; left: 12px; background: ${n.tagColor || 'var(--accent)'}; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
+                    ${escapeHtml(n.tag)}
+                  </span>
+                </div>
+                <div style="padding: 16px; display: flex; flex-direction: column; flex: 1;">
+                  <span style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px;">📅 ${escapeHtml(n.date)}</span>
+                  <h3 style="font-size: 15px; font-weight: 700; color: var(--primary); line-height: 1.35; margin-bottom: 8px;">
+                    ${escapeHtml(n.title)}
+                  </h3>
+                  <p style="font-size: 13px; color: #64748B; line-height: 1.5; margin-bottom: 14px; flex: 1;">
+                    ${escapeHtml(n.summary)}
+                  </p>
+                  <span style="color: var(--accent); font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 4px;">
+                    Batafsil o'qish &rarr;
+                  </span>
+                </div>
+              </div>
+            `).join('')}
           </div>
         </section>
 
@@ -1072,13 +1110,31 @@ class App {
             ` : ''}
 
             <!-- Tugmalar -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
               <button class="btn-primary" style="justify-content: center; padding: 14px;" onclick="store.addToCart('${prod.id}')">
                 🛒 Savatga qo'shish
               </button>
               <button class="btn-card-buy" style="justify-content: center; padding: 14px; font-size: 15px;" onclick="app.closeDetailModal(); app.buyNow('${prod.id}')">
                 ⚡ Bir klikda sotib olish
               </button>
+            </div>
+
+            <!-- Bog'lanish va buyurtma berish bloki -->
+            <div style="background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); border: 1.5px solid #86EFAC; border-radius: var(--radius-md); padding: 16px; margin-bottom: 22px;">
+              <div style="font-size: 13px; font-weight: 800; color: #166534; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>📞</span> Ushbu mahsulot bo'yicha to'g'ridan-to'g'ri bog'lanish va sotib olish:
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="tel:+998883851710" style="flex: 1; min-width: 170px; background: #15803D; color: #FFFFFF; padding: 10px 14px; border-radius: var(--radius-sm); font-weight: 700; font-size: 14px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 2px 8px rgba(21, 128, 61, 0.3);">
+                  <span>📞</span> +998 (88) 385-17-10
+                </a>
+                <a href="https://t.me/kompyuter_savdo_bot" target="_blank" style="flex: 1; min-width: 170px; background: #0284C7; color: #FFFFFF; padding: 10px 14px; border-radius: var(--radius-sm); font-weight: 700; font-size: 14px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);">
+                  <span>🤖</span> @kompyuter_savdo_bot
+                </a>
+              </div>
+              <div style="font-size: 11px; color: #166534; margin-top: 6px; text-align: center; font-weight: 600;">
+                Mutaxassis bilan telefon orqali yoki Telegram botda darhol bog'laning (savdolashish va narxni kelishish mumkin)
+              </div>
             </div>
 
             <!-- Kafolat va Yetkazish ko'rsatkichlari -->
@@ -1455,7 +1511,121 @@ class App {
     }
   }
 
-  // ================= 12. MOBIL MENYU BOSHQARUVI =================
+  // ================= 13. YANGILIKLAR SAHIFASI VA MODALI =================
+  renderNewsView() {
+    const mainView = document.getElementById('main-content-view');
+    const articles = typeof NEWS_ARTICLES !== 'undefined' ? NEWS_ARTICLES : [];
+
+    mainView.innerHTML = `
+      <div class="container" style="padding-top: 24px; padding-bottom: 50px;">
+        <div style="margin-bottom: 28px;">
+          <h1 style="font-size: 28px; font-weight: 800; color: var(--primary); margin-bottom: 6px;">
+            📰 O'zbekiston Kompyuter Bozori Yangiliklari va Foydali Maqolalar
+          </h1>
+          <p style="color: var(--text-muted); font-size: 14px;">
+            Kompyuterlar narxi, yangi texnologiyalar, ishlatilgan qismlarni tanlash va kreditga olish bo'yicha eng so'nggi qo'llanmalar
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          ${articles.map(n => `
+            <div class="news-card" onclick="app.openNewsModal('${n.id}')" style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-sm);">
+              <div style="height: 200px; overflow: hidden; position: relative;">
+                <img src="${n.image}" alt="${escapeHtml(n.title)}" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: ${n.tagColor || 'var(--accent)'}; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
+                  ${escapeHtml(n.tag)}
+                </span>
+              </div>
+              <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                <span style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">📅 ${escapeHtml(n.date)}</span>
+                <h2 style="font-size: 17px; font-weight: 700; color: var(--primary); line-height: 1.35; margin-bottom: 10px;">
+                  ${escapeHtml(n.title)}
+                </h2>
+                <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin-bottom: 16px; flex: 1;">
+                  ${escapeHtml(n.summary)}
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #F1F5F9; padding-top: 12px;">
+                  <span style="color: var(--accent); font-weight: 700; font-size: 13px;">Batafsil o'qish &rarr;</span>
+                  <span style="font-size: 12px; color: #94A3B8;">3 daqiqalik o'qish</span>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  openNewsModal(newsId) {
+    const article = (typeof NEWS_ARTICLES !== 'undefined' ? NEWS_ARTICLES : []).find(n => n.id === newsId);
+    if (!article) return;
+
+    let overlay = document.getElementById('news-modal-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'news-modal-overlay';
+      overlay.className = 'modal-overlay';
+      overlay.onclick = (e) => { if (e.target === overlay) app.closeNewsModal(); };
+      overlay.innerHTML = `
+        <div class="modal-card" style="max-width: 760px;">
+          <button class="modal-close-btn" onclick="app.closeNewsModal()">&times;</button>
+          <div id="news-modal-content"></div>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+    }
+
+    const content = document.getElementById('news-modal-content');
+    content.innerHTML = `
+      <div style="padding: 28px;">
+        <div style="margin-bottom: 14px;">
+          <span style="background: ${article.tagColor || 'var(--accent)'}; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
+            ${escapeHtml(article.tag)}
+          </span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">
+            📅 ${escapeHtml(article.date)}
+          </span>
+        </div>
+
+        <h1 style="font-size: 24px; font-weight: 800; color: var(--primary); line-height: 1.3; margin-bottom: 16px;">
+          ${escapeHtml(article.title)}
+        </h1>
+
+        <div style="height: 280px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 20px;">
+          <img src="${article.image}" alt="${escapeHtml(article.title)}" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div style="font-size: 15px; color: #334155; line-height: 1.7; margin-bottom: 24px;">
+          ${article.content}
+        </div>
+
+        <!-- Maslahat va Bog'lanish bloki maqola oxirida -->
+        <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: var(--radius-md); padding: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <div style="font-weight: 800; color: var(--primary); font-size: 14px;">Savollaringiz bormi? Kompyuter tanlashda yordam beramiz!</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Mutaxassisimiz bilan bepul maslahatlashing:</div>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <a href="tel:+998883851710" style="background: var(--accent); color: #FFFFFF; padding: 8px 14px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13px; text-decoration: none;">
+              📞 +998 (88) 385-17-10
+            </a>
+            <a href="https://t.me/kompyuter_savdo_bot" target="_blank" style="background: #0284C7; color: #FFFFFF; padding: 8px 14px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13px; text-decoration: none;">
+              🤖 Telegram Bot
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    overlay.classList.add('active');
+  }
+
+  closeNewsModal() {
+    const overlay = document.getElementById('news-modal-overlay');
+    if (overlay) overlay.classList.remove('active');
+  }
+
+  // ================= 14. MOBIL MENYU BOSHQARUVI =================
   toggleMobileMenu() {
     const drawer = document.getElementById('mobile-menu-drawer');
     const overlay = document.getElementById('mobile-menu-overlay');
