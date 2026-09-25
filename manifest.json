@@ -1,0 +1,24 @@
+{
+  "name": "UzTech PC Market — Kompyuter va Noutbuklar",
+  "short_name": "UzTech PC",
+  "description": "O'zbekistonda yangi va ishlatilgan kompyuterlar, noutbuklar va ehtiyot qismlar do'koni",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=192&q=80",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=512&q=80",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
