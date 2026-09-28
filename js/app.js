@@ -472,16 +472,7 @@ async function handleCheckoutSubmit(e) {
     checkoutForm.reset();
 
     showToast("Buyurtmangiz qabul qilindi! Tez orada bog'lanamiz.", "success");
-
-    // Xaridorni Telegramga buyurtma tafsilotlari bilan yo'naltirish
-    setTimeout(() => {
-      const confirmTg = confirm(
-        "Buyurtmangiz muvaffaqiyatli qayd etildi!\nDo'kon egasi (@Lukhmonjonov_10) bilan Telegram orqali bog'lanishni xohlaysizmi?"
-      );
-      if (confirmTg) {
-        window.open(result.telegramDirectUrl, "_blank");
-      }
-    }, 500);
+    alert("Rahmat! Buyurtmangiz qabul qilindi.\nTez orada siz bilan bog'lanamiz.\nAloqa: +998 88 385 17 10");
 
   } catch (err) {
     console.error(err);
