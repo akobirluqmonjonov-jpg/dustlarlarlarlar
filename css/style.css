@@ -1264,24 +1264,66 @@ img {
   .nav-links {
     display: none;
   }
-  .btn-header-cta span {
-    display: none;
+  .btn-header-cta {
+    padding: 8px 12px;
+  }
+  .hero {
+    padding: 35px 0 50px;
   }
   .hero-title {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .hero-card-img {
+    height: 320px;
+  }
+  .hero-floating-card {
+    left: 10px;
+    bottom: 10px;
+    padding: 10px 14px;
   }
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
   .topbar-content {
     justify-content: center;
+    gap: 8px;
+  }
+  .topbar-item {
+    font-size: 0.8rem;
   }
   .shop-toolbar {
     flex-direction: column;
     align-items: stretch;
+    padding: 12px;
+  }
+  .category-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    width: 100%;
+  }
+  .category-tabs::-webkit-scrollbar {
+    height: 4px;
+  }
+  .category-tabs::-webkit-scrollbar-thumb {
+    background: rgba(229, 169, 60, 0.3);
+    border-radius: 4px;
+  }
+  .cat-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.85rem;
   }
   .search-box {
     width: 100%;
@@ -1289,4 +1331,123 @@ img {
   .cart-drawer {
     max-width: 100%;
   }
+  .notice-card {
+    padding: 24px;
+  }
+  .notice-content h3 {
+    font-size: 1.4rem;
+  }
+  .modal-content {
+    margin: 10px;
+    max-height: 94vh;
+  }
+  .modal-body {
+    padding: 16px;
+  }
+  
+  /* Telefondan kirganda tovarlar 2 ustunda chiroyli chiqadi */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .product-img-wrapper {
+    height: 190px;
+  }
+  .product-info {
+    padding: 12px;
+  }
+  .product-name {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  .price-current {
+    font-size: 1rem;
+  }
+  .price-old {
+    font-size: 0.75rem;
+  }
+  .product-sizes-tags {
+    margin-bottom: 8px;
+    gap: 4px;
+  }
+  .size-tag {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+  .btn-add-cart {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .product-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+  .quick-view-btn {
+    display: none; /* Telefondan to'g'ridan-to'g'ri kartani bosganda yoki savatga qo'shadi */
+  }
+
+  /* Telefondagi pastki qotirilgan menyu (Bottom Nav) */
+  body {
+    padding-bottom: 70px;
+  }
+  .mobile-bottom-nav {
+    display: flex !important;
+  }
 }
+
+/* ==================== MOBIL PASTKI BAR ==================== */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(13, 15, 18, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-color);
+  z-index: 150;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+}
+.mobile-nav-item i {
+  font-size: 1.15rem;
+}
+.mobile-nav-item.active, .mobile-nav-item:hover {
+  color: var(--accent-gold);
+}
+.mobile-cart-badge {
+  position: absolute;
+  top: 2px;
+  right: calc(50% - 18px);
+  background: var(--accent-gold);
+  color: #000;
+  font-size: 0.68rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
