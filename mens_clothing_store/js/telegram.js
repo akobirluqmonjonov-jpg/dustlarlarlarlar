@@ -1,15 +1,12 @@
-// Telegram va Xabarnoma sozlamalari
-// Do'kon egasi: @Lukhmonjonov_10
+// Bildirishnoma va Do'kon sozlamalari
 // Telefon: +998 88 385 17 10
 
 const STORE_CONFIG = {
   ownerPhone: "+998 88 385 17 10",
   ownerPhoneRaw: "998883851710",
-  ownerTelegram: "Lukhmonjonov_10",
   storeName: "MENS LUXURY - Erkaklar Kiyimlari",
   
-  // Telegram Bot orqali to'g'ridan-to'g'ri SMS/Xabar yuborish sozlamalari:
-  // Foydalanuvchi istasa o'z bot tokenini va chat_id sini kiritishi mumkin (LocalStorage da ham saqlanadi)
+  // Telegram Bot orqali to'g'ridan-to'g'ri SMS/Xabar yuborish sozlamalari (Ixtiyoriy):
   botToken: localStorage.getItem("store_bot_token") || "",
   chatId: localStorage.getItem("store_chat_id") || ""
 };
@@ -36,35 +33,21 @@ function generateOrderMessage(orderData) {
     `📦 <b>Buyurtma tarkibi:</b>${itemsText}\n` +
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
     `💰 <b>JAMI TO'LOV:</b> <b>${formatPrice(orderData.totalAmount)}</b>\n` +
-    `🚚 <b>Yetkazib berish:</b> Toshkent va O'zbekiston bo'ylab\n` +
+    `🚚 <b>Yetkazib berish:</b> O'zbekiston bo'ylab\n` +
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `✨ <i>MENS LUXURY onlayn do'koni orqali yuborildi</i>`;
+    `✨ <i>MENS LUXURY onlayn do'koni orqali qabul qilindi</i>`;
 
   return message;
 }
 
 /**
- * Buyurtmani yuborish (Telegram bot orqali va/yoki to'g'ridan-to'g'ri Telegram chatga)
+ * Buyurtmani yuborish (Telegram bot orqali fon rejimida)
  */
 async function sendOrderNotification(orderData) {
   const htmlMessage = generateOrderMessage(orderData);
-  
-  // Telegram URL format uchun matn
-  let plainText = `🛍 YANGI BUYURTMA!\n` +
-    `Mijoz: ${orderData.customerName}\n` +
-    `Telefon: ${orderData.customerPhone}\n` +
-    `Manzil: ${orderData.customerAddress || "Keltirilmagan"}\n` +
-    `Izoh: ${orderData.customerNote || "Mavjud emas"}\n\n` +
-    `Buyurtma tarkibi:\n`;
-    
-  orderData.items.forEach((item, index) => {
-    plainText += `${index + 1}. ${item.name} (${item.selectedSize}) - ${item.quantity} dona x ${formatPrice(item.price)}\n`;
-  });
-  plainText += `\nJAMI SUMMA: ${formatPrice(orderData.totalAmount)}`;
-
   let botSent = false;
 
-  // 1. Agar Bot Token va Chat ID kiritilgan bo'lsa, avtomatik ravishda fon rejimida botdan sizga SMS/xabar yuboradi
+  // Agar Bot Token va Chat ID kiritilgan bo'lsa, avtomatik ravishda bot orqali sizga xabar boradi
   if (STORE_CONFIG.botToken && STORE_CONFIG.chatId) {
     try {
       const url = `https://api.telegram.org/bot${STORE_CONFIG.botToken}/sendMessage`;
@@ -82,17 +65,11 @@ async function sendOrderNotification(orderData) {
         botSent = true;
       }
     } catch (e) {
-      console.warn("Bot orqali yuborishda xatolik:", e);
+      console.warn("Bildirishnoma yuborishda xatolik:", e);
     }
   }
 
-  // 2. Mijoz uchun ham qulaylik: to'g'ridan-to'g'ri egasining Telegramiga (@Lukhmonjonov_10) yuborish havolasi
-  const encodedText = encodeURIComponent(plainText);
-  const telegramDirectUrl = `https://t.me/${STORE_CONFIG.ownerTelegram}?text=${encodedText}`;
-
   return {
-    botSent,
-    telegramDirectUrl,
-    plainText
+    botSent
   };
 }
