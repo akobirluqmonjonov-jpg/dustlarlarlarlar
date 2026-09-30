@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENS LUXURY - Zamonaviy Erkaklar Kiyimlari Do'koni</title>
+  <meta name="description" content="Eng sara erkaklar kiyimlari: zamonaviy futbolkalar, triko va shimlar, kurtkalar hamda sifatli oyoq kiyimlar. O'zbekiston bo'ylab tez yetkazib berish.">
+  
+  <!-- Font Awesome Ikonkalari -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Maxsus CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-contact">
+        <a href="tel:+998883851710" class="topbar-item">
+          <i class="fas fa-phone-alt"></i> +998 88 385 17 10
+        </a>
+      </div>
+      <div>
+        <span class="topbar-badge">
+          <i class="fas fa-truck-moving"></i> O'zbekiston bo'ylab yetkazib berish mavjud!
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ASOSIY HEADER ==================== -->
+  <header class="header">
+    <div class="container header-wrapper">
+      <a href="#" class="logo">
+        <div class="logo-icon">M</div>
+        <div>MENS<span>LUXURY</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Bosh sahifa</a></li>
+          <li><a href="#catalog" class="nav-link">Katalog</a></li>
+          <li><a href="#features" class="nav-link">Afzalliklar</a></li>
+          <li><a href="#contact" class="nav-link">Aloqa</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Telegram Bot sozlash (Admin/Ega uchun) -->
+        <button id="btnOpenBotSettings" class="btn-icon" title="SMS sozlamasi">
+          <i class="fas fa-cog"></i>
+        </button>
+
+        <!-- Savatcha tugmasi -->
+        <button id="btnOpenCart" class="btn-icon" title="Savatcha">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge cart-count">0</span>
+        </button>
+
+        <!-- To'g'ridan-to'g'ri qo'ng'iroq -->
+        <a href="tel:+998883851710" class="btn-header-cta">
+          <i class="fas fa-phone-alt"></i>
+          <span>Bog'lanish</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">
+          <i class="fas fa-crown"></i> Yangi Mavsum Kolleksiyasi 2026
+        </div>
+        <h1 class="hero-title">
+          Haqiqiy Erkaklar Uchun <span>Eng Sara Liboslar</span>
+        </h1>
+        <p class="hero-desc">
+          Har bir erkak o'z uslubiga munosib kiyinishi kerak. Bizda xilma-xil zamonaviy futbolkalar, sifatli triko va shimlar, mavsumiy kurtkalar hamda xaridorgir oyoq kiyimlar mujassam.
+        </p>
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn-primary">
+            <i class="fas fa-layer-group"></i> Katalogni ko'rish
+          </a>
+          <a href="tel:+998883851710" class="btn-secondary">
+            <i class="fas fa-phone-alt"></i> +998 88 385 17 10
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Tabiiy va sifatli mato</div>
+          </div>
+          <div>
+            <div class="stat-num">24+</div>
+            <div class="stat-label">Xilma-xil modellar</div>
+          </div>
+          <div>
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Tezkor xizmat</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=900&auto=format&fit=crop&q=80" alt="Erkaklar uslubi" class="hero-card-img" />
+        <div class="hero-floating-card">
+          <div class="hero-floating-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Tezkor SMS Buyurtma</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Siz sotib olgan zahoti egasiga xabar boradi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AFZALLIKLAR ==================== -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="feature-info">
+            <h4>A'lo Sifat</h4>
+            <p>Faqat tekshirilgan va chidamli matolar</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <div class="feature-info">
+            <h4>Tezkor Yetkazish</h4>
+            <p>O'zbekistonning barcha viloyatlariga</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="feature-info">
+            <h4>Aniq O'lcham</h4>
+            <p>Sizga mos o'lcham tanlashda yordam</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <div class="feature-info">
+            <h4>24/7 Aloqa</h4>
+            <p>Doimiy qo'llab-quvvatlash xizmati</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KATALOG BO'LIMI ==================== -->
+  <section class="shop-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Erkaklar Kiyimlari To'plami</span>
+        <h2 class="section-title">Bizning Mahsulotlar Katalogi</h2>
+        <p class="section-subtitle">
+          O'zingizga ma'qul toifani tanlang: futbolkalar, triko va shimlar, kurtkalar yoki oyoq kiyimlar.
+        </p>
+      </div>
+
+      <!-- Kategoriya va Qidiruv Paneli -->
+      <div class="shop-toolbar">
+        <div class="category-tabs">
+          <button class="cat-btn active" data-category="all">
+            <i class="fas fa-th-large"></i> Barchasi
+          </button>
+          <button class="cat-btn" data-category="futbolkalar">
+            <i class="fas fa-tshirt"></i> Futbolkalar
+          </button>
+          <button class="cat-btn" data-category="shimlar">
+            <i class="fas fa-socks"></i> Triko va Shimlar
+          </button>
+          <button class="cat-btn" data-category="kurtkalar">
+            <i class="fas fa-vest"></i> Kurtkalar
+          </button>
+          <button class="cat-btn" data-category="oyoq-kiyimlar">
+            <i class="fas fa-shoe-prints"></i> Oyoq kiyimlar
+          </button>
+        </div>
+
+        <div class="toolbar-controls">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Kiyimlarni qidirish..." />
+          </div>
+
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Saralash: Standart</option>
+            <option value="price-asc">Narx: Arzonroqdan</option>
+            <option value="price-desc">Narx: Qimmatroqdan</option>
+            <option value="rating">Reyting bo'yicha</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Mahsulotlar Grid -->
+      <div class="products-grid" id="productsContainer">
+        <!-- JavaScript orqali dinamik yuklanadi -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ALOQA VA BILDIRISHNOMA ==================== -->
+  <section class="notice-section" id="contact">
+    <div class="container">
+      <div class="notice-card">
+        <div class="notice-content">
+          <h3>Buyurtma va Savollar Uchun Aloqa</h3>
+          <p>
+            Har qanday savol yoki buyurtma uchun biz bilan to'g'ridan-to'g'ri telefon orqali bog'lanishingiz mumkin. Sayt orqali buyurtma qoldirganingizda, ma'lumotlar avtomatik ravishda egasiga xabar qilinadi!
+          </p>
+          <div class="notice-contacts">
+            <a href="tel:+998883851710" class="contact-chip">
+              <i class="fas fa-phone-alt"></i> +998 88 385 17 10
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="notice-status-badge">
+            <i class="fas fa-phone-volume"></i>
+            <strong>Tezkor Aloqa Xizmati</strong>
+            <span>Buyurtma berilgan zahoti operatorimiz siz bilan bog'lanadi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: 14px;">
+            <div class="logo-icon">M</div>
+            <div>MENS<span>LUXURY</span></div>
+          </div>
+          <p>
+            Erkaklar uchun zamonaviy, sifatli va qulay liboslar internet do'koni. Futbolkalar, shimlar, kurtkalar va poyabzallar eng qulay narxlarda.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Bo'limlar</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="filterByFooter('futbolkalar')">Futbolkalar</a></li>
+            <li><a href="#catalog" onclick="filterByFooter('shimlar')">Triko va Shimlar</a></li>
+            <li><a href="#catalog" onclick="filterByFooter('kurtkalar')">Kurtkalar</a></li>
+            <li><a href="#catalog" onclick="filterByFooter('oyoq-kiyimlar')">Oyoq kiyimlar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Xaridorlarga</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Yetkazib berish</a></li>
+            <li><a href="#features">O'lcham jadvali</a></li>
+            <li><a href="#contact">Kafolat va qaytarish</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Bog'lanish</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+998883851710">+998 88 385 17 10</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>O'zbekiston, Toshkent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MENS LUXURY. Barcha huquqlar himoyalangan.</div>
+        <div style="color: var(--accent-gold);">
+          Telefon: +998 88 385 17 10
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SAVATCHA DRAWER ==================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Savatcha (<span class="cart-count">0</span>)</h3>
+      <button class="btn-close" id="btnCloseCart">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cartItemsList">
+      <!-- Mahsulotlar bu yerga chiqadi -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Jami summa:</span>
+        <strong id="cartTotalPrice">0 so'm</strong>
+      </div>
+      <button class="btn-checkout" id="btnProceedCheckout">
+        <i class="fas fa-check-circle"></i> Buyurtma berish
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TEZKOR KO'RISH MODAL ==================== -->
+  <div class="modal" id="quickViewModal">
+    <div class="modal-content modal-quick-view">
+      <div class="modal-header">
+        <h3>Mahsulot Tafsilotlari</h3>
+        <button class="btn-close" id="btnCloseQuickView">&times;</button>
+      </div>
+      <div class="modal-body" id="quickViewContent">
+        <!-- JS orqali to'ldiriladi -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BUYURTMA RASMIYLASHTIRISH MODAL ==================== -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-shopping-cart" style="color: var(--accent-gold);"></i> Buyurtmani Rasmiylashtirish</h3>
+        <button class="btn-close" id="btnCloseCheckout">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          Ma'lumotlaringizni kiriting. Buyurtma tasdiqlangach, do'kon egasiga darhol xabarnoma yuboriladi.
+        </p>
+
+        <div class="checkout-summary">
+          <div style="font-weight: 700; margin-bottom: 8px; font-size: 0.9rem;">Tanlangan liboslar:</div>
+          <div id="checkoutSummaryItems"></div>
+          <div class="checkout-summary-row total">
+            <span>To'lov miqdori:</span>
+            <span id="checkoutSummaryTotal">0 so'm</span>
+          </div>
+        </div>
+
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label for="orderName">Ismingiz *</label>
+            <input type="text" id="orderName" required placeholder="Masalan: Sardor" />
+          </div>
+
+          <div class="form-group">
+            <label for="orderPhone">Telefon raqamingiz *</label>
+            <input type="tel" id="orderPhone" required placeholder="+998 90 123 45 67" />
+          </div>
+
+          <div class="form-group">
+            <label for="orderAddress">Yetkazib berish manzili</label>
+            <input type="text" id="orderAddress" placeholder="Shahar, tuman, ko'cha, uy raqami" />
+          </div>
+
+          <div class="form-group">
+            <label for="orderNote">Qo'shimcha istak yoki izoh</label>
+            <textarea id="orderNote" rows="2" placeholder="Masalan: Ertalab soat 10:00 dan keyin yetkazing..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-checkout" style="margin-top: 10px;">
+            <i class="fas fa-paper-plane"></i> Buyurtmani Tasdiqlash
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TELEGRAM XABARNOMA SOZLAMASI (ADMIN) ==================== -->
+  <div class="modal" id="botSettingsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-bell" style="color: var(--accent-gold);"></i> Bildirishnoma / Bot Sozlamasi</h3>
+        <button class="btn-close" id="btnCloseBotSettings">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          Har bir yangi buyurtma sizga avtomatik yetib kelishi uchun Bot token va Chat ID ni kiriting.
+        </p>
+
+        <form id="botSettingsForm">
+          <div class="form-group">
+            <label for="botTokenInput">Telegram Bot Token (BotFather dan olingan)</label>
+            <input type="text" id="botTokenInput" placeholder="Masalan: 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" />
+          </div>
+
+          <div class="form-group">
+            <label for="chatIdInput">Sizning Telegram Chat ID</label>
+            <input type="text" id="chatIdInput" placeholder="Masalan: 987654321" />
+          </div>
+
+          <button type="submit" class="btn-checkout">
+            <i class="fas fa-save"></i> Sozlamalarni Saqlash
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast xabarnomalar qutisi -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Mobil Qurilmalar Uchun Pastki Qulay Menyu (Bottom Navigation) -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero" class="mobile-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>Bosh sahifa</span>
+    </a>
+    <a href="#catalog" class="mobile-nav-item">
+      <i class="fas fa-tshirt"></i>
+      <span>Katalog</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="openCart()">
+      <i class="fas fa-shopping-bag"></i>
+      <span>Savatcha</span>
+      <span class="mobile-cart-badge cart-count">0</span>
+    </a>
+    <a href="tel:+998883851710" class="mobile-nav-item">
+      <i class="fas fa-phone-alt"></i>
+      <span>Qo'ng'iroq</span>
+    </a>
+    <a href="#contact" class="mobile-nav-item">
+      <i class="fas fa-headset"></i>
+      <span>Aloqa</span>
+    </a>
+  </nav>
+
+  <!-- Footer orqali filtrlash yordamchisi -->
+  <script>
+    function filterByFooter(cat) {
+      const btn = document.querySelector(`.cat-btn[data-category="${cat}"]`);
+      if (btn) btn.click();
+    }
+  </script>
+
+  <!-- Skriptlar -->
+  <script src="js/products.js"></script>
+  <script src="js/telegram.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
