@@ -1,0 +1,207 @@
+2026-09-23 14:11:56 | INFO    | music_bot | Bot polling tsikli boshlanmoqda...
+2026-09-23 14:11:59 | INFO    | database.db | Ma'lumotlar bazasi muvaffaqiyatli ishga tushirildi.
+2026-09-23 14:11:59 | INFO    | utils.cleaner | Avtomatik fayl tozalash xizmati ishga tushirildi.
+2026-09-23 14:12:00 | INFO    | music_bot | Bot 24/7 rejimida muvaffaqiyatli ishga tushdi: @ako_music_bot (ID: 8758208022)
+2026-09-23 14:12:00 | INFO    | aiogram.dispatcher | Start polling
+2026-09-23 14:12:00 | INFO    | aiogram.dispatcher | Run polling for bot @ako_music_bot id=8758208022 - '🎵'
+2026-09-23 14:12:18 | INFO    | aiogram.event | Update id=581973611 is handled. Duration 1709 ms by bot id=8758208022
+2026-09-23 14:12:22 | INFO    | handlers.user_handlers | Foydalanuvchi [5976989735] havola yubordi: https://www.instagram.com/reel/Ddg50ugNBdr/
+2026-09-23 14:12:42 | INFO    | handlers.user_handlers | Video tayyor [5976989735]: C:\Users\FE-09\Desktop\music bot\downloads\video_0b045a2eb1.mp4 (20.04s)
+2026-09-23 14:15:00 | INFO    | aiogram.event | Update id=581973612 is handled. Duration 158092 ms by bot id=8758208022
+2026-09-23 14:16:01 | INFO    | music_bot | Bot polling tsikli boshlanmoqda...
+2026-09-23 14:16:01 | INFO    | database.db | Ma'lumotlar bazasi muvaffaqiyatli ishga tushirildi.
+2026-09-23 14:16:01 | INFO    | utils.cleaner | Avtomatik fayl tozalash xizmati ishga tushirildi.
+2026-09-23 14:16:02 | INFO    | music_bot | Bot 24/7 rejimida muvaffaqiyatli ishga tushdi: @ako_music_bot (ID: 8758208022)
+2026-09-23 14:16:02 | INFO    | aiogram.dispatcher | Start polling
+2026-09-23 14:16:04 | INFO    | aiogram.dispatcher | Run polling for bot @ako_music_bot id=8758208022 - '🎵'
+2026-09-23 14:16:21 | INFO    | aiogram.event | Update id=581973615 is handled. Duration 520 ms by bot id=8758208022
+2026-09-23 14:16:40 | INFO    | aiogram.event | Update id=581973616 is handled. Duration 1136 ms by bot id=8758208022
+2026-09-23 14:16:52 | INFO    | aiogram.event | Update id=581973617 is handled. Duration 483 ms by bot id=8758208022
+2026-09-23 14:17:32 | INFO    | handlers.user_handlers | Foydalanuvchi [5327124471] havola yubordi: https://www.instagram.com/reel/DdT5b4KNQi_/
+2026-09-23 14:18:21 | INFO    | handlers.user_handlers | Video tayyor [5327124471]: C:\Users\FE-09\Desktop\music bot\downloads\video_da74126c40.mp4 (49.05s)
+2026-09-23 14:18:26 | INFO    | aiogram.event | Update id=581973618 is handled. Duration 53583 ms by bot id=8758208022
+2026-09-23 14:18:54 | ERROR   | handlers.user_handlers | Foydalanuvchi [5327124471] uchun audio tayyorlashda xatolik: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "C:\Users\FE-09\Desktop\music bot\handlers\user_handlers.py", line 237, in cb_get_audio
+    await callback.answer()
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-23 14:18:55 | INFO    | aiogram.event | Update id=581973619 is not handled. Duration 18177 ms by bot id=8758208022
+2026-09-23 14:18:55 | ERROR   | aiogram.event | Cause exception while process update id=581973619 by bot id=8758208022
+TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "C:\Users\FE-09\Desktop\music bot\handlers\user_handlers.py", line 237, in cb_get_audio
+    await callback.answer()
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\Desktop\music bot\middlewares\throttling.py", line 57, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\Desktop\music bot\handlers\user_handlers.py", line 251, in cb_get_audio
+    await callback.answer()
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "C:\Users\FE-09\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-23 14:31:55 | INFO    | aiogram.event | Update id=581973620 is not handled. Duration 1 ms by bot id=8758208022
+2026-09-23 14:32:41 | INFO    | aiogram.event | Update id=581973621 is handled. Duration 204 ms by bot id=8758208022
+2026-09-23 14:40:14 | ERROR   | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-23 14:40:14 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8758208022)
+2026-09-23 14:40:26 | INFO    | aiogram.dispatcher | Connection established (tryings = 1, bot id = 8758208022)
+2026-09-23 14:46:01 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: video_059a0c9916.mp4.part
+2026-09-23 14:46:01 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: video_0cd911fb71.mp4.part
+2026-09-23 14:46:01 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: video_3b2c9362e9.fdash-38854749104140208v.mp4.part
+2026-09-23 14:46:01 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: video_79c2429d76.fdash-38854749104140208v.mp4.part
+2026-09-23 14:46:01 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: video_a38ad79c05.mp4
+2026-09-23 14:49:35 | ERROR   | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-23 14:49:35 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8758208022)
+2026-09-23 14:49:47 | INFO    | aiogram.dispatcher | Connection established (tryings = 1, bot id = 8758208022)
+2026-09-23 14:58:22 | INFO    | music_bot | Bot polling tsikli boshlanmoqda...
+2026-09-23 14:58:24 | INFO    | database.db | Ma'lumotlar bazasi muvaffaqiyatli ishga tushirildi.
+2026-09-23 14:58:24 | INFO    | utils.cleaner | Avtomatik fayl tozalash xizmati ishga tushirildi.
+2026-09-23 14:58:24 | INFO    | music_bot | Bot 24/7 rejimida muvaffaqiyatli ishga tushdi: @dustlarlarlarlarlar_bot (ID: 8704237469)
+2026-09-23 14:58:24 | INFO    | aiogram.dispatcher | Start polling
+2026-09-23 14:58:24 | INFO    | aiogram.dispatcher | Run polling for bot @dustlarlarlarlarlar_bot id=8704237469 - 'dustlar_lar_lar_lar_lar'
+2026-09-23 14:59:34 | INFO    | aiogram.event | Update id=4979184 is handled. Duration 1076 ms by bot id=8704237469
+2026-09-23 14:59:52 | INFO    | aiogram.event | Update id=4979185 is handled. Duration 204 ms by bot id=8704237469
+2026-09-23 15:07:11 | ERROR   | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-23 15:07:11 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8704237469)
+2026-09-23 15:07:47 | ERROR   | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Указанное сетевое имя более недоступно]
+2026-09-23 15:07:47 | WARNING | aiogram.dispatcher | Sleep for 1.414816 seconds and try again... (tryings = 1, bot id = 8704237469)
+2026-09-23 15:08:22 | ERROR   | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Указанное сетевое имя более недоступно]
+2026-09-23 15:08:22 | WARNING | aiogram.dispatcher | Sleep for 1.772365 seconds and try again... (tryings = 2, bot id = 8704237469)
+2026-09-23 15:08:39 | INFO    | aiogram.dispatcher | Connection established (tryings = 3, bot id = 8704237469)
+2026-09-23 15:25:45 | INFO    | aiogram.event | Update id=4979186 is handled. Duration 456 ms by bot id=8704237469
+2026-09-23 15:28:24 | INFO    | utils.cleaner | Eski vaqtinchalik fayl tozalandi: audio_a500d42ce5.mp3
+2026-09-23 15:32:49 | INFO    | music_bot | Bot polling tsikli boshlanmoqda...
+2026-09-23 15:32:53 | INFO    | database.db | Ma'lumotlar bazasi muvaffaqiyatli ishga tushirildi.
+2026-09-23 15:32:53 | INFO    | utils.cleaner | Avtomatik fayl tozalash xizmati ishga tushirildi.
+2026-09-23 15:32:53 | INFO    | music_bot | Bot 24/7 rejimida muvaffaqiyatli ishga tushdi: @dustlar_lar_lar_lar_bot (ID: 8757082436)
+2026-09-23 15:32:53 | INFO    | aiogram.dispatcher | Start polling
+2026-09-23 15:32:53 | INFO    | aiogram.dispatcher | Run polling for bot @dustlar_lar_lar_lar_bot id=8757082436 - 'dustlar'
+2026-09-23 15:33:38 | INFO    | aiogram.event | Update id=190219219 is handled. Duration 591 ms by bot id=8757082436
+2026-09-23 15:33:43 | INFO    | aiogram.event | Update id=190219220 is handled. Duration 348 ms by bot id=8757082436
+2026-09-23 15:33:57 | INFO    | handlers.user_handlers | Foydalanuvchi [5976989735] havola yubordi: https://www.instagram.com/reel/Ddg50ugNBdr/
+2026-09-23 15:34:02 | INFO    | handlers.user_handlers | Video tayyor [5976989735]: C:\Users\FE-09\Desktop\music bot\downloads\video_97f66dffb3.mp4 (4.98s)
+2026-09-23 15:34:24 | INFO    | aiogram.event | Update id=190219221 is handled. Duration 26552 ms by bot id=8757082436
+2026-09-23 15:34:32 | INFO    | aiogram.event | Update id=190219222 is handled. Duration 3956 ms by bot id=8757082436
+2026-09-23 15:34:43 | INFO    | aiogram.event | Update id=190219223 is handled. Duration 369 ms by bot id=8757082436
+2026-09-23 15:34:52 | INFO    | aiogram.event | Update id=190219224 is handled. Duration 2290 ms by bot id=8757082436
+2026-09-25 13:53:35 | INFO    | music_bot | Bot polling tsikli boshlanmoqda...
+2026-09-25 13:53:37 | INFO    | database.db | Ma'lumotlar bazasi muvaffaqiyatli ishga tushirildi.
+2026-09-25 13:53:37 | INFO    | utils.cleaner | Avtomatik fayl tozalash xizmati ishga tushirildi.
+2026-09-25 13:53:38 | INFO    | music_bot | Bot 24/7 rejimida muvaffaqiyatli ishga tushdi: @sher_glass_bot (ID: 8603667891)
+2026-09-25 13:53:38 | INFO    | aiogram.dispatcher | Start polling
+2026-09-25 13:53:38 | INFO    | aiogram.dispatcher | Run polling for bot @sher_glass_bot id=8603667891 - '🎸 insta'
+2026-09-25 13:56:17 | INFO    | aiogram.event | Update id=298315620 is handled. Duration 515 ms by bot id=8603667891
+2026-09-25 13:56:40 | INFO    | handlers.user_handlers | Foydalanuvchi [5976989735] Instagram havolasi yubordi: https://www.instagram.com/reel/DdnlMhgxrTb/
+2026-09-25 13:56:48 | INFO    | aiogram.event | Update id=298315621 is handled. Duration 7732 ms by bot id=8603667891
+2026-09-25 14:04:32 | INFO    | aiogram.event | Update id=298315622 is handled. Duration 273 ms by bot id=8603667891
+2026-09-25 14:05:12 | INFO    | aiogram.event | Update id=298315623 is handled. Duration 284 ms by bot id=8603667891
