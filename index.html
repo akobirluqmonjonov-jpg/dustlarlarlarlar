@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GM Uzbekistan - Rasmiy GM Avtomobillar Savdosi</title>
+    <title>GM O'zbekiston - Mashina Bozor (Yangi, Yurilgan, Kraskasi bor)</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,12 +12,31 @@
 </head>
 <body>
 
+    <!-- Havola (Silka) va Ulashish paneli -->
+    <div class="site-link-banner">
+        <div class="container site-link-content">
+            <div class="link-label">
+                <i class="fa-solid fa-globe"></i>
+                <span>Bizning rasmiy sayt havolasi (silka):</span>
+                <strong id="liveUrlText">https://akobirluqmonjonov-jpg.github.io/dustlarlarlarlar/</strong>
+            </div>
+            <div class="link-buttons">
+                <button class="btn-copy-link" onclick="copySiteLink()">
+                    <i class="fa-solid fa-copy"></i> Silkani nusxalash
+                </button>
+                <a href="https://t.me/share/url?url=https://akobirluqmonjonov-jpg.github.io/dustlarlarlarlar/&text=GM+Uzbekistan+mashinalar+bozori.+Kreditga+ham+beriladi.+Yangi,+yurilgan+va+urilgan+moshinalar!" target="_blank" class="btn-telegram-share">
+                    <i class="fa-brands fa-telegram"></i> Do'stlarga yuborish
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Yuqori qator (Top Bar) -->
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
-                <span><i class="fa-solid fa-location-dot"></i> O'zbekiston bo'ylab yetkazib berish</span>
-                <span><i class="fa-solid fa-clock"></i> 24/7 Maslahat va Buyurtma</span>
+                <span><i class="fa-solid fa-certificate"></i> O'zbekiston Bozor Narxlarida</span>
+                <span><i class="fa-solid fa-hand-holding-dollar"></i> Kredit & Naqd & Bo'lib to'lash</span>
             </div>
             <div class="top-contacts">
                 <a href="tel:+998883851710" class="phone-link">
@@ -32,10 +51,10 @@
     <header class="main-header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <div class="logo-badge">GM</div>
+                <div class="logo-badge">UZ</div>
                 <div class="logo-text">
-                    <span class="logo-title">CHEVROLET UZ</span>
-                    <span class="logo-sub">Faqat O'zbekiston GM Avtomobillari</span>
+                    <span class="logo-title">GM MASHINA BOZOR</span>
+                    <span class="logo-sub">Yangi • Yurilgan • Urilgan/Kraskasi bor</span>
                 </div>
             </a>
 
@@ -43,14 +62,14 @@
                 <a href="#home" class="nav-link active">Bosh sahifa</a>
                 <a href="#cars" class="nav-link">Avtomobillar</a>
                 <a href="#calculator" class="nav-link">Kredit Kalkulyatori</a>
-                <a href="#advantages" class="nav-link">Afzalliklar</a>
+                <a href="#advantages" class="nav-link">Shartlar</a>
                 <a href="#contact" class="nav-link">Bog'lanish</a>
             </nav>
 
             <div class="header-action">
                 <a href="tel:+998883851710" class="btn btn-call">
                     <i class="fa-solid fa-phone"></i>
-                    <span>Qo'ng'iroq qilish</span>
+                    <span>+998 88 385 17 10</span>
                 </a>
                 <button class="mobile-toggle" id="menuToggle">
                     <i class="fa-solid fa-bars"></i>
@@ -64,14 +83,20 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <div class="hero-badge">
-                    <i class="fa-solid fa-shield-halved"></i> 100% Kafolatli GM Avtomobillari
+                    <i class="fa-solid fa-tags"></i> Real O'zbekiston Bozor Narxlari
                 </div>
-                <h1>O'zbekistonda Ishlab Chiqarilgan <span>GM Avtomobillari</span></h1>
-                <p>Cobalt, Gentra, Onix, Tracker, Damas va boshqa barcha GM (Chevrolet) modellari eng qulay narxlar va tezkor rasmiylashtirish bilan!</p>
+                <h1>O'zbekiston <span>GM Mashinalari</span> Savdosi</h1>
+                <p>Cobalt, Damas, Nexia, Gentra, Spark, Labo va Matiz. <strong>Yangi (0 km)</strong>, <strong>yurilgan</strong> va arzon narxdagi <strong>kraskasi bor / yengil urilgan</strong> avtomobillar!</p>
                 
+                <div class="hero-highlights">
+                    <span class="badge-pill green"><i class="fa-solid fa-check"></i> Kreditga beriladi (20% dan)</span>
+                    <span class="badge-pill blue"><i class="fa-solid fa-car"></i> Yangi va Yurilgan</span>
+                    <span class="badge-pill orange"><i class="fa-solid fa-wrench"></i> Urilgan / Kraska (Arzon)</span>
+                </div>
+
                 <div class="hero-buttons">
                     <a href="#cars" class="btn btn-primary">
-                        <i class="fa-solid fa-car"></i> Mashinalarni Ko'rish
+                        <i class="fa-solid fa-car-side"></i> Barcha Mashinalarni Ko'rish
                     </a>
                     <a href="tel:+998883851710" class="btn btn-secondary">
                         <i class="fa-solid fa-phone"></i> +998 88 385 17 10
@@ -80,54 +105,54 @@
 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <strong>10+</strong>
-                        <span>GM Modellari</span>
+                        <strong>12+</strong>
+                        <span>Hozir Sotuvda</span>
                     </div>
                     <div class="stat-item">
-                        <strong>0 km</strong>
-                        <span>Yangi Avtomobillar</span>
+                        <strong>Kredit</strong>
+                        <span>1 yildan 5 yilgacha</span>
                     </div>
                     <div class="stat-item">
-                        <strong>1 kunda</strong>
-                        <span>Rasmiylashtirish</span>
+                        <strong>35 mln+</strong>
+                        <span>Boshlang'ich Narxlar</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-image-card">
-                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=900&q=80" alt="GM Chevrolet" class="hero-img">
+                <img src="images/cobalt.jpg" alt="GM Mashinalari" class="hero-img">
                 <div class="hero-floating-card">
-                    <i class="fa-solid fa-certificate"></i>
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
                     <div>
-                        <h4>Rasmiy GM Savdosi</h4>
-                        <p>Faqat O'zbekiston bozori uchun</p>
+                        <h4>Kredit & Bo'lib To'lash</h4>
+                        <p>Barcha GM modellari uchun qulay shartlar</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Filtr va Qidiruv bo'limi -->
+    <!-- Filtr va Katalog -->
     <section class="catalog-section" id="cars">
         <div class="container">
             <div class="section-header text-center">
-                <span class="sub-heading">Bizning Modellar</span>
-                <h2>O'zbekiston GM Avtomobillar Katalogi</h2>
-                <p>Bizda faqat O'zbekistonda rasmiy sotiladigan Chevrolet modellari mavjud</p>
+                <span class="sub-heading">Mashinalar Ro'yxati</span>
+                <h2>Sotuvdagi GM Mashinalari va Narxlari</h2>
+                <p>O'zingizga ma'qul narx, holat (yangi, yurilgan, kraskasi bor) va to'lov turini tanlang</p>
             </div>
 
             <div class="filter-controls">
-                <div class="category-tabs" id="categoryTabs">
+                <div class="category-tabs" id="statusTabs">
                     <button class="tab-btn active" data-filter="all">Barchasi</button>
-                    <button class="tab-btn" data-filter="sedan">Sedanlar</button>
-                    <button class="tab-btn" data-filter="suv">Krossover & SUV</button>
-                    <button class="tab-btn" data-filter="commercial">Tijorat (Damas/Labo)</button>
-                    <button class="tab-btn" data-filter="premium">Premium</button>
+                    <button class="tab-btn" data-filter="yangi">🟢 Yangi (0 km)</button>
+                    <button class="tab-btn" data-filter="yurilgan">🔵 Yurilgan (Ikkinchi qo'l)</button>
+                    <button class="tab-btn" data-filter="urilgan">🟠 Kraskasi bor / Urilgan (Arzon)</button>
+                    <button class="tab-btn" data-filter="kredit">💳 Kreditga beriladiganlar</button>
                 </div>
 
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="carSearch" placeholder="Model nomini qidiring (masalan: Cobalt, Onix...)">
+                    <input type="text" id="carSearch" placeholder="Modelni qidiring: Cobalt, Damas, Nexia, Gentra...">
                 </div>
             </div>
 
@@ -143,9 +168,9 @@
         <div class="container">
             <div class="calculator-wrapper">
                 <div class="calculator-info">
-                    <span class="sub-heading">Qulay To'lov</span>
+                    <span class="sub-heading">Kreditga Olish</span>
                     <h2>GM Avtokredit Kalkulyatori</h2>
-                    <p>O'zingizga ma'qul bo'lgan Chevrolet modelini kredit yoki bo'lib to'lash shartlari bo'yicha hisoblab ko'ring.</p>
+                    <p>Yangi, yurilgan yoki kraskasi bor avtomobillarni kredit yoki bo'lib to'lashga oylik to'lovini hisoblang.</p>
                     
                     <div class="calc-benefits">
                         <div class="benefit-row">
@@ -154,16 +179,20 @@
                         </div>
                         <div class="benefit-row">
                             <i class="fa-solid fa-check-circle"></i>
-                            <span>Muddat 1 yildan 5 yilgacha</span>
+                            <span>Muddat: 12 oydan 60 oygacha (1-5 yil)</span>
                         </div>
                         <div class="benefit-row">
                             <i class="fa-solid fa-check-circle"></i>
-                            <span>Barcha hujjatlarni tezkor rasmiylashtirish</span>
+                            <span>Yurilgan va arzon mashinalarga ham variantlar bor</span>
+                        </div>
+                        <div class="benefit-row">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Hujjatlar tezkor: Passport va daromad ma'lumotnomasi</span>
                         </div>
                     </div>
 
                     <div class="calc-phone-box">
-                        <p>Kredit bo'yicha to'liq maslahat olish:</p>
+                        <p>Kredit bo'yicha tezkor maslahat olish:</p>
                         <a href="tel:+998883851710" class="btn btn-primary">
                             <i class="fa-solid fa-phone"></i> +998 88 385 17 10
                         </a>
@@ -174,7 +203,7 @@
                     <h3>Oylik to'lovni hisoblash</h3>
                     
                     <div class="form-group">
-                        <label>Avtomobilni tanlang:</label>
+                        <label>Mashinani tanlang:</label>
                         <select id="calcCarSelect" class="form-control">
                             <!-- Javascript orqali yuklanadi -->
                         </select>
@@ -182,7 +211,7 @@
 
                     <div class="form-group">
                         <div class="label-with-val">
-                            <label>Avtomobil narxi:</label>
+                            <label>Mashina narxi:</label>
                             <span id="calcCarPriceDisplay" class="value-badge">0 so'm</span>
                         </div>
                     </div>
@@ -215,7 +244,7 @@
 
                     <div class="calc-result-box">
                         <div class="result-item">
-                            <span>Boshlang'ich to'lov miqdori:</span>
+                            <span>Boshlang'ich to'lov:</span>
                             <strong id="downPaymentAmount">0 so'm</strong>
                         </div>
                         <div class="result-item highlight">
@@ -225,52 +254,52 @@
                     </div>
 
                     <button class="btn btn-primary btn-block" onclick="orderLoanCall()">
-                        <i class="fa-solid fa-paper-plane"></i> Ushbu shartda buyurtma berish
+                        <i class="fa-solid fa-paper-plane"></i> Ushbu shartda kreditga ariza berish
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Afzalliklar -->
+    <!-- Afzalliklar / Nega biz? -->
     <section class="advantages-section" id="advantages">
         <div class="container">
             <div class="section-header text-center">
-                <span class="sub-heading">Nima uchun aynan biz?</span>
-                <h2>GM Avtomobillarini Bizdan Xarid Qiling</h2>
+                <span class="sub-heading">Bizning Shartlar</span>
+                <h2>Har Qanday Xaridor Uchun Qulay Yechim</h2>
             </div>
 
             <div class="advantages-grid">
                 <div class="adv-card">
                     <div class="adv-icon">
-                        <i class="fa-solid fa-flag-checkered"></i>
+                        <i class="fa-solid fa-credit-card"></i>
                     </div>
-                    <h3>Faqat O'zbekiston GM</h3>
-                    <p>O'zbekiston iqlimi va yo'llariga 100% moslashtirilgan, kafolatli zavod avtomobillari.</p>
+                    <h3>Kreditga Beriladi</h3>
+                    <p>Barcha yangi va ikkinchi qo'l GM mashinalari qulay foizlarda kreditga beriladi.</p>
                 </div>
 
                 <div class="adv-card">
                     <div class="adv-icon">
-                        <i class="fa-solid fa-file-contract"></i>
+                        <i class="fa-solid fa-wrench"></i>
                     </div>
-                    <h3>Tezkor Hujjatlar</h3>
-                    <p>Barcha notarial va DYHXX (GAI) rasmiylashtirish ishlari eng qisqa fursatda bitkaziladi.</p>
+                    <h3>Arzon & Urilgan Variantlar</h3>
+                    <p>Hamyonbop narxda kraskasi bor yoki yengil urilgan, lekin motor-xodovoy qismi butun arzon mashinalar ham mavjud.</p>
                 </div>
 
                 <div class="adv-card">
                     <div class="adv-icon">
-                        <i class="fa-solid fa-tags"></i>
+                        <i class="fa-solid fa-scale-balanced"></i>
                     </div>
-                    <h3>Eng Yaxshi Narxlar</h3>
-                    <p>Hech qanday ortiqcha vositachilarsiz va yashirin to'lovlarsiz qulay narxlar.</p>
+                    <h3>Bozor Narxlari</h3>
+                    <p>Sergeli, Samarqand va O'zbekistonning haqiqiy bozor narxlarida savdo qilinadi.</p>
                 </div>
 
                 <div class="adv-card">
                     <div class="adv-icon">
-                        <i class="fa-solid fa-headset"></i>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
-                    <h3>To'g'ridan-To'g'ri Aloqa</h3>
-                    <p>Mutaxassisimiz doim aloqada: <strong>+998 88 385 17 10</strong></p>
+                    <h3>Doimiy Aloqa</h3>
+                    <p>Telefon: <strong>+998 88 385 17 10</strong>. Istalgan vaqtda qo'ng'iroq qilishingiz mumkin.</p>
                 </div>
             </div>
         </div>
@@ -281,9 +310,9 @@
         <div class="container">
             <div class="contact-box">
                 <div class="contact-info">
-                    <span class="sub-heading">Biz bilan bog'laning</span>
-                    <h2>Savollaringiz bormi yoki mashina tanlamoqchimisiz?</h2>
-                    <p>Telefon qiling yoki forma orqali raqamingizni qoldiring, biz sizga 5 daqiqa ichida qo'ng'iroq qilamiz!</p>
+                    <span class="sub-heading">Bog'lanish</span>
+                    <h2>Mashina sotib olmoqchimisiz yoki sotmoqchimisiz?</h2>
+                    <p>Hoziroq qo'ng'iroq qiling yoki raqamingizni qoldiring. Kredit va naqd savdo bo'yicha to'liq ma'lumot beramiz!</p>
                     
                     <div class="contact-details">
                         <div class="contact-row">
@@ -297,27 +326,27 @@
                         <div class="contact-row">
                             <i class="fa-brands fa-telegram"></i>
                             <div>
-                                <span>Telegram orqali:</span>
+                                <span>Telegram:</span>
                                 <a href="https://t.me/+998883851710" target="_blank">+998 88 385 17 10</a>
                             </div>
                         </div>
 
                         <div class="contact-row">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
                             <div>
-                                <span>Manzil:</span>
-                                <p>O'zbekiston, Toshkent sh.</p>
+                                <span>Sayt havolasi (Silka):</span>
+                                <p style="font-size: 14px; word-break: break-all;">https://akobirluqmonjonov-jpg.github.io/dustlarlarlarlar/</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-form-card">
-                    <h3>Tezkor buyurtma / Maslahat olish</h3>
+                    <h3>Tezkor buyurtma / Maslahat</h3>
                     <form id="leadForm" onsubmit="handleLeadSubmit(event)">
                         <div class="form-group">
                             <label>Ismingiz</label>
-                            <input type="text" id="userName" required placeholder="Masalan: Jamshid" class="form-control">
+                            <input type="text" id="userName" required placeholder="Masalan: Azizbek" class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -326,36 +355,40 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Qiziqtirgan GM modeli</label>
+                            <label>Qiziqtirgan mashina va holati</label>
                             <select id="userCar" class="form-control">
-                                <option value="Cobalt">Chevrolet Cobalt</option>
-                                <option value="Gentra">Chevrolet Gentra (Lacetti)</option>
-                                <option value="Onix">Chevrolet Onix</option>
-                                <option value="Tracker">Chevrolet Tracker</option>
-                                <option value="Damas">Chevrolet Damas</option>
+                                <option value="Cobalt Yangi">Chevrolet Cobalt (Yangi)</option>
+                                <option value="Cobalt Yurilgan">Chevrolet Cobalt (Yurilgan)</option>
+                                <option value="Cobalt Urilgan/Kraska">Chevrolet Cobalt (Kraskasi bor - Arzon)</option>
+                                <option value="Gentra Yangi">Chevrolet Gentra (Yangi / Ideal)</option>
+                                <option value="Gentra Kraskasi bor">Chevrolet Gentra (Kraskasi bor - Arzon)</option>
+                                <option value="Damas Yangi">Chevrolet Damas (Yangi)</option>
+                                <option value="Damas Yurilgan">Chevrolet Damas (Yurilgan)</option>
                                 <option value="Labo">Chevrolet Labo</option>
-                                <option value="Malibu 2">Chevrolet Malibu 2</option>
-                                <option value="Captiva">Chevrolet Captiva</option>
-                                <option value="Equinox">Chevrolet Equinox</option>
-                                <option value="Traverse">Chevrolet Traverse</option>
-                                <option value="Tahoe">Chevrolet Tahoe</option>
+                                <option value="Nexia 3">Chevrolet Nexia 3</option>
+                                <option value="Nexia 2">Daewoo Nexia 2</option>
+                                <option value="Spark">Chevrolet Spark</option>
+                                <option value="Matiz">Daewoo Matiz (Arzon)</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Qo'shimcha izoh (ixtiyoriy)</label>
-                            <textarea id="userMessage" rows="3" placeholder="Rang yoki to'lov turi bo'yicha savollaringiz..." class="form-control"></textarea>
+                            <label>To'lov turi</label>
+                            <select id="userPayType" class="form-control">
+                                <option value="Kredit">Kreditga olmoqchiman</option>
+                                <option value="Naqd">Naqd pulga sotib olaman</option>
+                                <option value="Variant">Bo'lib to'lash (Variantga)</option>
+                            </select>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fa-solid fa-paper-plane"></i> Yuborish va Maslahat Olish
+                            <i class="fa-solid fa-paper-plane"></i> Murojaatni Yuborish
                         </button>
-                        <p class="form-privacy"><i class="fa-solid fa-lock"></i> Ma'lumotlaringiz xavfsizligi kafolatlanadi</p>
                     </form>
                     <div id="formSuccessMessage" class="success-message" style="display: none;">
                         <i class="fa-solid fa-circle-check"></i>
-                        <h4>Rahmat! So'rovingiz qabul qilindi.</h4>
-                        <p>Mutaxassisimiz tez orada <strong>+998 88 385 17 10</strong> raqamidan siz bilan bog'lanadi!</p>
+                        <h4>Rahmat! Murojaatingiz qabul qilindi.</h4>
+                        <p>Mutaxassisimiz tez orada <strong>+998 88 385 17 10</strong> raqamidan sizga qo'ng'iroq qiladi!</p>
                     </div>
                 </div>
             </div>
@@ -367,34 +400,37 @@
         <div class="container footer-content">
             <div class="footer-col">
                 <div class="logo">
-                    <div class="logo-badge">GM</div>
+                    <div class="logo-badge">UZ</div>
                     <div class="logo-text">
-                        <span class="logo-title">CHEVROLET UZ</span>
-                        <span class="logo-sub">GM O'zbekiston Avtosaloni</span>
+                        <span class="logo-title">GM MASHINA BOZOR</span>
+                        <span class="logo-sub">Yangi • Yurilgan • Urilgan/Kraska</span>
                     </div>
                 </div>
-                <p class="footer-desc">Faqat O'zbekistonda ishlab chiqarilgan va rasmiy GM (UzAuto Motors) avtomobillarining eng ishonchli savdo platformasi.</p>
+                <p class="footer-desc">O'zbekiston bo'ylab barcha GM avtomobillarini naqd, kredit va bo'lib to'lashga eng qulay bozor narxlarida xarid qiling.</p>
+                <div class="footer-share-box">
+                    <span>Sayt silkani ulashing:</span>
+                    <button onclick="copySiteLink()" class="btn-copy-small"><i class="fa-solid fa-copy"></i> Silkani nusxalash</button>
+                </div>
             </div>
 
             <div class="footer-col">
-                <h4>Mashhur GM Modellari</h4>
+                <h4>Sotuvdagi Mashinalar</h4>
                 <ul class="footer-links">
-                    <li><a href="#cars" onclick="filterByCategory('sedan')">Chevrolet Cobalt</a></li>
-                    <li><a href="#cars" onclick="filterByCategory('sedan')">Chevrolet Gentra / Lacetti</a></li>
-                    <li><a href="#cars" onclick="filterByCategory('sedan')">Chevrolet Onix</a></li>
-                    <li><a href="#cars" onclick="filterByCategory('suv')">Chevrolet Tracker</a></li>
-                    <li><a href="#cars" onclick="filterByCategory('commercial')">Chevrolet Damas & Labo</a></li>
+                    <li><a href="#cars">Cobalt (Yangi & Yurilgan)</a></li>
+                    <li><a href="#cars">Gentra (Lyuk & Kraskasi bor)</a></li>
+                    <li><a href="#cars">Damas & Labo (Tijorat)</a></li>
+                    <li><a href="#cars">Nexia 3 & Nexia 2</a></li>
+                    <li><a href="#cars">Spark & Matiz (Tejamkor)</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Tezkor Havolalar</h4>
+                <h4>To'lov Shartlari</h4>
                 <ul class="footer-links">
-                    <li><a href="#home">Bosh sahifa</a></li>
-                    <li><a href="#cars">Barcha GM mashinalari</a></li>
-                    <li><a href="#calculator">Kredit kalkulyatori</a></li>
-                    <li><a href="#advantages">Afzalliklar</a></li>
-                    <li><a href="#contact">Bog'lanish</a></li>
+                    <li><a href="#calculator">Avtokredit (20% dan)</a></li>
+                    <li><a href="#calculator">Bo'lib to'lash (Variant)</a></li>
+                    <li><a href="#cars">Naqd pulga chegirmalar</a></li>
+                    <li><a href="#advantages">Arzon narxdagi mashinalar</a></li>
                 </ul>
             </div>
 
@@ -404,38 +440,32 @@
                     <i class="fa-solid fa-phone"></i>
                     <a href="tel:+998883851710">+998 88 385 17 10</a>
                 </p>
-                <p><i class="fa-solid fa-envelope"></i> savdo@chevrolet-uz.uz</p>
-                <p><i class="fa-solid fa-shield"></i> Faqat GM O'zbekiston</p>
-                <div class="footer-socials">
-                    <a href="tel:+998883851710" title="Qo'ng'iroq"><i class="fa-solid fa-phone"></i></a>
-                    <a href="https://t.me/+998883851710" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                </div>
+                <p><i class="fa-brands fa-telegram"></i> Telegram: +998 88 385 17 10</p>
+                <p><i class="fa-solid fa-globe"></i> https://akobirluqmonjonov-jpg.github.io/dustlarlarlarlar/</p>
             </div>
         </div>
         
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <p>&copy; 2026 GM Chevrolet Uzbekistan. Barcha huquqlar himoyalangan.</p>
-                <p>Murojaat uchun: <strong>+998 88 385 17 10</strong></p>
+                <p>&copy; 2026 GM O'zbekiston Mashina Bozor. Barcha huquqlar himoyalangan.</p>
+                <p>Aloqa: <strong>+998 88 385 17 10</strong></p>
             </div>
         </div>
     </footer>
 
-    <!-- Mashina batafsil ma'lumot modali -->
+    <!-- Modal -->
     <div class="modal" id="carModal">
         <div class="modal-overlay" onclick="closeModal()"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-body" id="modalBody">
-                <!-- Javascript orqali yuklanadi -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
-    <!-- Tezkor qo'ng'iroq suzuvchi tugmasi (Floating call button) -->
+    <!-- Suzuvchi qo'ng'iroq tugmasi -->
     <a href="tel:+998883851710" class="floating-call-btn" title="+998 88 385 17 10">
         <i class="fa-solid fa-phone"></i>
-        <span class="call-tooltip">Qo'ng'iroq qilish: +998 88 385 17 10</span>
+        <span class="call-tooltip">Qo'ng'iroq: +998 88 385 17 10</span>
     </a>
 
     <script src="app.js"></script>

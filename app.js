@@ -1,168 +1,243 @@
-// O'zbekistonda sotiladigan barcha GM (UzAuto Motors / Chevrolet) modellari
+// O'zbekiston bozoridagi real GM mashinalari (Yangi, Yurilgan, Urilgan/Kraskasi bor)
 const gmCars = [
     {
-        id: "cobalt",
-        name: "Chevrolet Cobalt",
-        subtitle: "Eng ommabop va tejamkor oilaviy sedan",
-        category: "sedan",
+        id: "cobalt-yangi",
+        name: "Chevrolet Cobalt (4-pozitsiya Style AT)",
+        subtitle: "Yangi (0 km), salondan chiqqan, to'liq jihozlangan",
+        condition: "yangi",
+        conditionText: "🟢 Yangi (0 km)",
+        hasCredit: true,
         price: 156500000,
+        priceUsd: "$12 200",
         priceFormatted: "156 500 000 so'm",
-        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+        image: "images/cobalt.jpg",
+        mileage: "0 km (Salondan)",
+        damageInfo: "Top-toza, zavod kraska, 100% kafolat",
         engine: "1.5 L DOHC (106 ot kuchi)",
-        transmission: "Avtomat (6-bosqich) / Mexanika",
+        transmission: "Avtomat (6-bosqich)",
         fuel: "Benzin (6.7 L / 100km)",
         year: "2025 - 2026",
-        description: "Chevrolet Cobalt — O'zbekistonning eng ishonchli va keng sedanlaridan biri. Keng yukxona (545 litr), qulay salon, arzon ehtiyot qismlari va kam yoqilg'i sarfi bilan mashhur."
+        description: "Chevrolet Cobalt 4-pozitsiya Style yangi avtomobil. Konditsioner, ABS, isitiladigan o'rindiqlar, yangi dizayndagi disklar. Kreditga 20% boshlang'ich to'lov bilan beriladi."
     },
     {
-        id: "gentra",
-        name: "Chevrolet Gentra (Lacetti)",
-        subtitle: "Klassik qulaylik va xalq mehrini qozongan avtomobil",
-        category: "sedan",
-        price: 169000000,
-        priceFormatted: "169 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+        id: "cobalt-yurilgan",
+        name: "Chevrolet Cobalt (2-pozitsiya)",
+        subtitle: "Yurilgan, holati juda yaxshi, tejamkor va toza",
+        condition: "yurilgan",
+        conditionText: "🔵 Yurilgan (Ikkinchi qo'l)",
+        hasCredit: true,
+        price: 118000000,
+        priceUsd: "$9 200",
+        priceFormatted: "118 000 000 so'm",
+        image: "images/cobalt.jpg",
+        mileage: "68 000 km",
+        damageInfo: "Kraskasi toza, petnosi yo'q, moylari yangi almashtirilgan",
+        engine: "1.5 L (106 ot kuchi)",
+        transmission: "Mexanika (5-bosqich)",
+        fuel: "Benzin / Gaz (Propan o'rnatilgan)",
+        year: "2021",
+        description: "Cobalt 2-pozitsiya. Bir qo'l haydalgan, taksida yurmagan, motor va xodovoy qismlari soatday ishlaydi. Naqdga yoki kreditga beriladi."
+    },
+    {
+        id: "cobalt-urilgan",
+        name: "Chevrolet Cobalt (Kraskasi bor - Arzon)",
+        subtitle: "Hamyonbop variant, yengil turtilgan, ichiga o'tmagan",
+        condition: "urilgan",
+        conditionText: "🟠 Kraskasi bor / Urilgan (Arzon)",
+        hasCredit: true,
+        price: 95000000,
+        priceUsd: "$7 400",
+        priceFormatted: "95 000 000 so'm",
+        image: "images/cobalt.jpg",
+        mileage: "94 000 km",
+        damageInfo: "O'ng old krilo va kapot uchi kraska qilingan, suyagi butun, radiator butun",
+        engine: "1.5 L (106 ot kuchi)",
+        transmission: "Avtomat (6-bosqich)",
+        fuel: "Benzin / Metan (4-avlod)",
+        year: "2019",
+        description: "Arzon narxda Cobalt qidirayotganlar uchun! Kichik turtilish bo'lgan, kraskasi qilingan, suyagi va lanjeronlari butun. Haydashga 100% tayyor. Bo'lib to'lash yoki kreditga ham kelishiladi."
+    },
+    {
+        id: "gentra-yangi",
+        name: "Chevrolet Gentra (Lacetti 3-pozitsiya CDX)",
+        subtitle: "Ideal holatda, lyuk, ABS, magnitafon, qotishma disklar",
+        condition: "yangi",
+        conditionText: "🟢 Yangi kabi (Minimal probeg)",
+        hasCredit: true,
+        price: 172000000,
+        priceUsd: "$13 400",
+        priceFormatted: "172 000 000 so'm",
+        image: "images/gentra.jpg",
+        mileage: "14 000 km",
+        damageInfo: "Top-toza zavod kraska, chizig'i ham yo'q",
+        engine: "1.5 L DOHC (107 ot kuchi)",
+        transmission: "Avtomat (6-bosqich)",
+        fuel: "Benzin (7.0 L / 100km)",
+        year: "2024",
+        description: "Chevrolet Gentra Elegant Plus. Qora salon, lyuk, orqa kamera, yangi balonlar qo'yilgan. Kreditga rasmiylashtirib beriladi."
+    },
+    {
+        id: "gentra-urilgan",
+        name: "Chevrolet Gentra (Kraskasi bor / Urilgan - Arzon)",
+        subtitle: "Bozor narxidan ancha arzon, motor va karobkasi a'lo",
+        condition: "urilgan",
+        conditionText: "🟠 Kraskasi bor / Urilgan (Arzon)",
+        hasCredit: true,
+        price: 112000000,
+        priceUsd: "$8 700",
+        priceFormatted: "112 000 000 so'm",
+        image: "images/gentra.jpg",
+        mileage: "135 000 km",
+        damageInfo: "Oldi o'ng qismi urilib tuzatilgan, detallari yangi original qo'yilgan",
         engine: "1.5 L (107 ot kuchi)",
         transmission: "Avtomat (6-bosqich)",
-        fuel: "Benzin / Gazga mos (7.0 L / 100km)",
-        year: "2024 - 2025",
-        description: "Chevrolet Lacetti (Gentra) — O'zbekiston ko'chalarining haqiqiy afsonasi. Mustahkam osma tizimi, lyuk, qotishma disklar va yuqori darajadagi boshqaruv qulayligi."
+        fuel: "Benzin / Gaz (Metan)",
+        year: "2018",
+        description: "Hamyonbop Gentra avtomat. Yengil avariya bo'lgan, ustalar tomonidan sifatli tiklangan. Hozirda hech qanday xarajati yo'q, minib ketishga tayyor."
     },
     {
-        id: "onix",
-        name: "Chevrolet Onix",
-        subtitle: "Zamonaviy dizayn, turbo dvigatel va ilg'or texnologiya",
-        category: "sedan",
-        price: 188000000,
-        priceFormatted: "188 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-        engine: "1.2 L Turbo (132 ot kuchi)",
-        transmission: "Avtomat (6-bosqich)",
-        fuel: "Benzin (5.9 L / 100km)",
-        year: "2025 - 2026",
-        description: "Yangi avlod Chevrolet Onix: Simsiz zaryadlash, kruiz-nazorat, ko'r zonalarni kuzatish, yarim avtomat parkovka va 5 yulduzli xavfsizlik."
-    },
-    {
-        id: "tracker",
-        name: "Chevrolet Tracker 2",
-        subtitle: "Shahar va sayohatlar uchun zamonaviy krossover",
-        category: "suv",
-        price: 242000000,
-        priceFormatted: "242 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-        engine: "1.2 L Turbo (132 ot kuchi)",
-        transmission: "Avtomat (6-bosqich)",
-        fuel: "Benzin (6.5 L / 100km)",
-        year: "2025 - 2026",
-        description: "Chevrolet Tracker — Panorama lyuk, katta multimedia ekrani, zamonaviy LED faralar va baland klirens bilan har qanday yo'lda ishonchli."
-    },
-    {
-        id: "damas",
-        name: "Chevrolet Damas",
-        subtitle: "Biznes va yo'lovchi tashishda tengsiz mikroven",
-        category: "commercial",
+        id: "damas-yangi",
+        name: "Chevrolet Damas D2 (Deluxe)",
+        subtitle: "Yangi (0 km), yo'lovchi tashish va biznes uchun",
+        condition: "yangi",
+        conditionText: "🟢 Yangi (0 km)",
+        hasCredit: true,
         price: 98000000,
+        priceUsd: "$7 650",
         priceFormatted: "98 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?auto=format&fit=crop&w=800&q=80",
+        image: "images/damas.jpg",
+        mileage: "0 km (Salondan)",
+        damageInfo: "Yangi, kafolati bor",
         engine: "0.8 L (38 ot kuchi)",
         transmission: "Mexanika (5-bosqich)",
         fuel: "Benzin (6.0 L / 100km)",
         year: "2025 - 2026",
-        description: "Chevrolet Damas — 7-8 o'rinli, O'zbekiston sharoitida o'zini to'liq oqlagan xalq avtomobili. Kam xarajat, yuqori daromadlilik va chidamlilik timsoli."
+        description: "Yangi Chevrolet Damas Deluxe. 7-8 o'rinli, pechka va xodovoy mukammal. Kreditga boshlang'ich 20 million so'm to'lov bilan beriladi."
     },
     {
-        id: "labo",
-        name: "Chevrolet Labo",
-        subtitle: "Kichik biznes uchun eng ishonchli yengil yuk mashinasi",
-        category: "commercial",
+        id: "damas-yurilgan",
+        name: "Chevrolet Damas (Yurilgan / Tirikchilikbop)",
+        subtitle: "Yurilgan, tayyor gaz balloni bilan, daromad keltiruvchi",
+        condition: "yurilgan",
+        conditionText: "🔵 Yurilgan (Ikkinchi qo'l)",
+        hasCredit: true,
+        price: 68000000,
+        priceUsd: "$5 300",
+        priceFormatted: "68 000 000 so'm",
+        image: "images/damas.jpg",
+        mileage: "115 000 km",
+        damageInfo: "Et-betida mayda kraskasi bor, qattiq urilmagan, suyagi butun",
+        engine: "0.8 L (38 ot kuchi)",
+        transmission: "Mexanika (5-bosqich)",
+        fuel: "Metan gaz (65 talik ballon)",
+        year: "2020",
+        description: "Tirikchilik va kirakashlik uchun tayyor Damas. Gaz balloni ruxsatnomasi bilan, motori moy yemaydi, salon chexollari yangi."
+    },
+    {
+        id: "labo-yangi",
+        name: "Chevrolet Labo (Bortli yuk mashinasi)",
+        subtitle: "Yangi (0 km), kichik biznes uchun tengsiz yuk tashuvchi",
+        condition: "yangi",
+        conditionText: "🟢 Yangi (0 km)",
+        hasCredit: true,
         price: 96000000,
+        priceUsd: "$7 500",
         priceFormatted: "96 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1586191582056-a4c330df32cf?auto=format&fit=crop&w=800&q=80",
+        image: "images/labo.jpg",
+        mileage: "0 km (Salondan)",
+        damageInfo: "Zavod holatida, yangi",
         engine: "0.8 L (38 ot kuchi)",
         transmission: "Mexanika (5-bosqich)",
         fuel: "Benzin (6.2 L / 100km)",
         year: "2025 - 2026",
-        description: "Chevrolet Labo — 550+ kg gacha yuk ko'tarish qobiliyatiga ega, shahar ichida tirbandliklarda chaqqon harakatlanuvchi qulay tijorat transporti."
+        description: "Chevrolet Labo yangi bortli yuk mashinasi. 550 kg yuk ko'tarish, qulay bort va kam yoqilg'i sarfi. Kreditga rasmiylashtiriladi."
     },
     {
-        id: "malibu",
-        name: "Chevrolet Malibu 2",
-        subtitle: "Biznes-klass hashamati va kuchli 2.0 Turbo dvigatel",
-        category: "premium",
-        price: 418000000,
-        priceFormatted: "418 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
-        engine: "2.0 L Turbo (253 ot kuchi)",
-        transmission: "Avtomat (9-bosqich)",
-        fuel: "Benzin (8.5 L / 100km)",
-        year: "2025",
-        description: "Chevrolet Malibu 2 — Oliy darajadagi qulaylik, charmdan qilingan hashamatli salon, shamollatiladigan va isitiladigan o'rindiqlar hamda dinamik tezlanish."
+        id: "nexia3-yurilgan",
+        name: "Chevrolet Nexia 3 (Ravon R3 AT)",
+        subtitle: "Yurilgan, toza holatda, shahar uchun eng qulay sedan",
+        condition: "yurilgan",
+        conditionText: "🔵 Yurilgan (Ikkinchi qo'l)",
+        hasCredit: true,
+        price: 114000000,
+        priceUsd: "$8 900",
+        priceFormatted: "114 000 000 so'm",
+        image: "images/nexia3.jpg",
+        mileage: "58 000 km",
+        damageInfo: "Oldi bamper bo'yalgan, qolgan hamma joyi zavod kraska",
+        engine: "1.5 L (106 ot kuchi)",
+        transmission: "Avtomat (6-bosqich)",
+        fuel: "Benzin / Gaz (Propan)",
+        year: "2021",
+        description: "Nexia 3 4-pozitsiya avtomat. Shahar ichida chaqqon va yumshoq yuradi. Salon toza, chexol-polik qilingan, kreditga ham beriladi."
     },
     {
-        id: "captiva",
-        name: "Chevrolet Captiva 5",
-        subtitle: "Katta oila uchun 7 o'rinli zamonaviy krossover",
-        category: "suv",
-        price: 335000000,
-        priceFormatted: "335 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-        engine: "1.5 L Turbo (147 ot kuchi)",
-        transmission: "CVT Avtomat",
-        fuel: "Benzin (7.5 L / 100km)",
-        year: "2025 - 2026",
-        description: "Chevrolet Captiva — Katta sig'imli 7 o'rindiqli salon, zamonaviy multimedia, 360 darajali kameralar va sayohatlar uchun keng imkoniyatlar."
+        id: "nexia2-arzon",
+        name: "Daewoo Nexia 2 (DOHC 1.6)",
+        subtitle: "Xalqona klassik Nexia — hamyonbop narxda",
+        condition: "yurilgan",
+        conditionText: "🔵 Yurilgan (Arzon narx)",
+        hasCredit: true,
+        price: 58000000,
+        priceUsd: "$4 500",
+        priceFormatted: "58 000 000 so'm",
+        image: "images/nexia2.jpg",
+        mileage: "185 000 km",
+        damageInfo: "Orqa krilo va eshikda kraskasi bor, suyaklari butun",
+        engine: "1.6 L DOHC (109 ot kuchi)",
+        transmission: "Mexanika (5-bosqich)",
+        fuel: "Benzin / Metan (100 talik gaz)",
+        year: "2013",
+        description: "Daewoo Nexia 2 DOHC motor. Xodovoylari qilingan, balonlari yangi, pechkasi yaxshi isitadi. Naqd yoki variantga kelishiladi."
     },
     {
-        id: "equinox",
-        name: "Chevrolet Equinox",
-        subtitle: "Sport xarakteriga ega premium to'liq uzatmali krossover",
-        category: "suv",
-        price: 430000000,
-        priceFormatted: "430 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80",
-        engine: "2.0 L Turbo (237 ot kuchi) + AWD",
-        transmission: "Avtomat (9-bosqich)",
-        fuel: "Benzin (8.2 L / 100km)",
-        year: "2025",
-        description: "Chevrolet Equinox — AWD to'liq uzatma, aqlli xavfsizlik tizimlari, panorama tom va har qanday sharoitda barqaror dinamika."
+        id: "spark-yurilgan",
+        name: "Chevrolet Spark (4-pozitsiya AT)",
+        subtitle: "Ayollar va yoshlar uchun ideal ixcham xetchbek",
+        condition: "yurilgan",
+        conditionText: "🔵 Yurilgan (Ikkinchi qo'l)",
+        hasCredit: true,
+        price: 98000000,
+        priceUsd: "$7 650",
+        priceFormatted: "98 000 000 so'm",
+        image: "images/spark.jpg",
+        mileage: "62 000 km",
+        damageInfo: "Toza, kraskasi yo'q, uy-ish haydalgan",
+        engine: "1.25 L (85 ot kuchi)",
+        transmission: "Avtomat (4-bosqich)",
+        fuel: "Benzin (6.0 L / 100km)",
+        year: "2020",
+        description: "Spark 4-pozitsiya avtomat. Konditsioner muzdek, audio sistema, parktronik bor. Kreditga yoki naqdga beriladi."
     },
     {
-        id: "traverse",
-        name: "Chevrolet Traverse",
-        subtitle: "Cheksiz qulaylikka ega to'liq o'lchamli premium SUV",
-        category: "premium",
-        price: 745000000,
-        priceFormatted: "745 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
-        engine: "3.6 L V6 (318 ot kuchi) + AWD",
-        transmission: "Avtomat (9-bosqich)",
-        fuel: "Benzin (10.0 L / 100km)",
-        year: "2025",
-        description: "Chevrolet Traverse — 3 qator o'rindiq, keng bagaj, yuqori toifadagi xavfsizlik va uzoq masofalarga sayohatlar uchun eng qulay premium yo'ltanlamas."
-    },
-    {
-        id: "tahoe",
-        name: "Chevrolet Tahoe",
-        subtitle: "Haqiqiy qudrat va nufuz timsoli bo'lgan flagman yo'ltanlamas",
-        category: "premium",
-        price: 1080000000,
-        priceFormatted: "1 080 000 000 so'm",
-        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-        engine: "5.3 L V8 EcoTec3 (343 ot kuchi)",
-        transmission: "Avtomat (10-bosqich) + 4x4",
-        fuel: "Benzin (12.5 L / 100km)",
-        year: "2025 - 2026",
-        description: "Chevrolet Tahoe — V8 dvigatelning shiddati, ramali mustahkam konstruksiya, pnevmopodveska va tengsiz qulaylik bilan eng yuqori darajadagi GM avtomobili."
+        id: "matiz-arzon",
+        name: "Daewoo Matiz (Best - Arzon variant)",
+        subtitle: "Minimal xarajat, juda tejamkor va arzon shahar mashinasi",
+        condition: "urilgan",
+        conditionText: "🟠 Kraskasi bor / Arzon variant",
+        hasCredit: false,
+        price: 39000000,
+        priceUsd: "$3 000",
+        priceFormatted: "39 000 000 so'm",
+        image: "images/matiz.jpg",
+        mileage: "170 000 km",
+        damageInfo: "Kuzovda mayda chiziq va kraskalari bor, motori yangi qilingan",
+        engine: "0.8 L (52 ot kuchi)",
+        transmission: "Mexanika (5-bosqich)",
+        fuel: "Benzin (5.0 L / 100km)",
+        year: "2014",
+        description: "Matiz — arzon va tejamkor mashina xohlovchilar uchun. Tirbandliklarda qulay, benzinni umuman yemaydi, 39 million so'mga tayyor miniladigan mashina!"
     }
 ];
 
 // Telefon raqam
 const CONTACT_PHONE = "+998 88 385 17 10";
 const CONTACT_PHONE_RAW = "+998883851710";
+const SITE_LIVE_URL = "https://akobirluqmonjonov-jpg.github.io/dustlarlarlarlar/";
 
 // DOM elementlari
 const carsGrid = document.getElementById("carsGrid");
-const categoryTabs = document.getElementById("categoryTabs");
+const statusTabs = document.getElementById("statusTabs");
 const carSearch = document.getElementById("carSearch");
 const calcCarSelect = document.getElementById("calcCarSelect");
 const calcCarPriceDisplay = document.getElementById("calcCarPriceDisplay");
@@ -177,31 +252,45 @@ const modalBody = document.getElementById("modalBody");
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-let currentCategory = "all";
+let currentFilter = "all";
 let searchQuery = "";
 
-// Raqamlarni so'm formatiga o'tkazish
+// Sayt linkini nusxalash funksiyasi
+function copySiteLink() {
+    navigator.clipboard.writeText(SITE_LIVE_URL).then(() => {
+        alert("✅ Sayt havolasi nusxalandi! Do'stlaringizga Telegram orqali yuborishingiz mumkin:\n" + SITE_LIVE_URL);
+    }).catch(err => {
+        prompt("Sayt havolasini nusxalang:", SITE_LIVE_URL);
+    });
+}
+
 function formatMoney(amount) {
     return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " so'm";
 }
 
-// Avtomobillarni sahifada ko'rsatish
+// Mashinalarni render qilish
 function renderCars() {
     carsGrid.innerHTML = "";
 
     const filtered = gmCars.filter(car => {
-        const matchesCategory = currentCategory === "all" || car.category === currentCategory;
+        let matchesFilter = true;
+        if (currentFilter === "yangi") matchesFilter = car.condition === "yangi";
+        else if (currentFilter === "yurilgan") matchesFilter = car.condition === "yurilgan";
+        else if (currentFilter === "urilgan") matchesFilter = car.condition === "urilgan";
+        else if (currentFilter === "kredit") matchesFilter = car.hasCredit === true;
+
         const matchesSearch = car.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              car.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
+                              car.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              car.damageInfo.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesFilter && matchesSearch;
     });
 
     if (filtered.length === 0) {
         carsGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px;">
                 <i class="fa-solid fa-car-tunnel" style="font-size: 48px; color: #94a3b8; margin-bottom: 15px;"></i>
-                <h3>Hech qanday GM avtomobili topilmadi</h3>
-                <p style="color: #64748b;">Qidiruv so'zini o'zgartirib ko'ring yoki boshqa toifani tanlang.</p>
+                <h3>Bunday GM avtomobili topilmadi</h3>
+                <p style="color: #64748b;">Qidiruv so'zini o'zgartiring yoki boshqa toifani tanlang.</p>
             </div>
         `;
         return;
@@ -210,20 +299,32 @@ function renderCars() {
     filtered.forEach(car => {
         const card = document.createElement("div");
         card.className = "car-card";
+        
+        let conditionBadgeClass = "badge-new";
+        if (car.condition === "yurilgan") conditionBadgeClass = "badge-used";
+        if (car.condition === "urilgan") conditionBadgeClass = "badge-damaged";
+
         card.innerHTML = `
             <div class="car-image-box">
                 <img src="${car.image}" alt="${car.name}" loading="lazy">
-                <span class="car-tag">${car.category === 'suv' ? 'Krossover' : car.category === 'commercial' ? 'Tijorat' : car.category === 'premium' ? 'Premium' : 'Sedan'}</span>
-                <span class="car-badge-gm"><i class="fa-solid fa-certificate"></i> GM UZ</span>
+                <span class="car-condition-badge ${conditionBadgeClass}">${car.conditionText}</span>
+                ${car.hasCredit ? '<span class="car-credit-badge"><i class="fa-solid fa-credit-card"></i> Kredit bor</span>' : ''}
             </div>
             <div class="car-body">
-                <h3 class="car-title">${car.name}</h3>
+                <div class="car-header-row">
+                    <h3 class="car-title">${car.name}</h3>
+                </div>
                 <p class="car-subtitle">${car.subtitle}</p>
+
+                <div class="car-damage-box">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span><strong>Holati:</strong> ${car.damageInfo}</span>
+                </div>
 
                 <div class="car-specs-grid">
                     <div class="spec-item">
-                        <i class="fa-solid fa-gauge-high"></i>
-                        <span>${car.engine.split('(')[0]}</span>
+                        <i class="fa-solid fa-road"></i>
+                        <span>${car.mileage}</span>
                     </div>
                     <div class="spec-item">
                         <i class="fa-solid fa-gear"></i>
@@ -241,14 +342,14 @@ function renderCars() {
 
                 <div class="car-footer">
                     <div class="car-price-box">
-                        <span class="car-price-label">Narxi:</span>
+                        <span class="car-price-label">Narxi (${car.priceUsd}):</span>
                         <span class="car-price">${car.priceFormatted}</span>
                     </div>
                     <div class="car-buttons">
                         <button class="btn-detail" onclick="openCarModal('${car.id}')">
                             <i class="fa-solid fa-circle-info"></i> Batafsil
                         </button>
-                        <a href="tel:${CONTACT_PHONE_RAW}" class="btn-order-call" title="Telefon qilish">
+                        <a href="tel:${CONTACT_PHONE_RAW}" class="btn-order-call" title="Qo'ng'iroq qilish: +998 88 385 17 10">
                             <i class="fa-solid fa-phone"></i>
                         </a>
                     </div>
@@ -259,35 +360,23 @@ function renderCars() {
     });
 }
 
-// Kategoriya filteri
-categoryTabs.addEventListener("click", (e) => {
+// Filtr tablari
+statusTabs.addEventListener("click", (e) => {
     if (e.target.classList.contains("tab-btn")) {
-        categoryTabs.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+        statusTabs.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
         e.target.classList.add("active");
-        currentCategory = e.target.getAttribute("data-filter");
+        currentFilter = e.target.getAttribute("data-filter");
         renderCars();
     }
 });
 
-function filterByCategory(cat) {
-    currentCategory = cat;
-    categoryTabs.querySelectorAll(".tab-btn").forEach(btn => {
-        if (btn.getAttribute("data-filter") === cat) {
-            btn.classList.add("active");
-        } else {
-            btn.classList.remove("active");
-        }
-    });
-    renderCars();
-}
-
-// Qidiruv maydoni
+// Qidiruv
 carSearch.addEventListener("input", (e) => {
     searchQuery = e.target.value.trim();
     renderCars();
 });
 
-// Modalni ochish
+// Modal
 function openCarModal(carId) {
     const car = gmCars.find(c => c.id === carId);
     if (!car) return;
@@ -298,14 +387,34 @@ function openCarModal(carId) {
             <div class="modal-detail-header">
                 <div>
                     <h2>${car.name}</h2>
-                    <p style="color: #64748b;">${car.subtitle}</p>
+                    <p style="color: #64748b; margin-top: 4px;">${car.subtitle}</p>
                 </div>
-                <div class="modal-detail-price">${car.priceFormatted}</div>
+                <div>
+                    <div class="modal-detail-price">${car.priceFormatted}</div>
+                    <span style="color: #059669; font-weight: 700; font-size: 14px;">Bozor narxi: ${car.priceUsd}</span>
+                </div>
+            </div>
+
+            <div style="background: #f8fafc; border-left: 4px solid #c8963e; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
+                <strong>Kuzov va kraska holati:</strong>
+                <p style="color: #1e293b; margin: 4px 0 0;">${car.damageInfo}</p>
             </div>
 
             <p style="margin-bottom: 20px; line-height: 1.7;">${car.description}</p>
 
             <table class="modal-specs-table">
+                <tr>
+                    <td>Holati:</td>
+                    <td><strong>${car.conditionText}</strong></td>
+                </tr>
+                <tr>
+                    <td>Bosib o'tgan yo'li (Probeg):</td>
+                    <td><strong>${car.mileage}</strong></td>
+                </tr>
+                <tr>
+                    <td>Kreditga beriladimi:</td>
+                    <td><strong>${car.hasCredit ? '✅ Ha, kreditga beriladi (20% boshlang\'ich)' : '❌ Faqat naqd yoki bo\'lib to\'lash'}</strong></td>
+                </tr>
                 <tr>
                     <td>Dvigatel:</td>
                     <td><strong>${car.engine}</strong></td>
@@ -315,16 +424,12 @@ function openCarModal(carId) {
                     <td><strong>${car.transmission}</strong></td>
                 </tr>
                 <tr>
-                    <td>Yoqilg'i sarfi:</td>
+                    <td>Yoqilg'i:</td>
                     <td><strong>${car.fuel}</strong></td>
                 </tr>
                 <tr>
-                    <td>Ishlab chiqarilgan yili:</td>
+                    <td>Yili:</td>
                     <td><strong>${car.year}</strong></td>
-                </tr>
-                <tr>
-                    <td>Kafolat:</td>
-                    <td><strong>3 yil yoki 100 000 km rasmiy kafolat</strong></td>
                 </tr>
             </table>
 
@@ -332,9 +437,9 @@ function openCarModal(carId) {
                 <a href="tel:${CONTACT_PHONE_RAW}" class="btn btn-call btn-block">
                     <i class="fa-solid fa-phone"></i> Hoziroq qo'ng'iroq qilish: ${CONTACT_PHONE}
                 </a>
-                <button onclick="selectCarForCalc('${car.id}')" class="btn btn-secondary btn-block">
+                ${car.hasCredit ? `<button onclick="selectCarForCalc('${car.id}')" class="btn btn-secondary btn-block">
                     <i class="fa-solid fa-calculator"></i> Kreditni hisoblash
-                </button>
+                </button>` : ''}
             </div>
         </div>
     `;
@@ -355,13 +460,13 @@ function selectCarForCalc(carId) {
     window.location.hash = "calculator";
 }
 
-// Kredit kalkulyatori sozlamalari
+// Kredit kalkulyatori
 function initCalculator() {
     calcCarSelect.innerHTML = "";
-    gmCars.forEach(car => {
+    gmCars.filter(c => c.hasCredit).forEach(car => {
         const option = document.createElement("option");
         option.value = car.id;
-        option.textContent = `${car.name} (${car.priceFormatted})`;
+        option.textContent = `${car.name} — ${car.priceFormatted} (${car.conditionText})`;
         calcCarSelect.appendChild(option);
     });
 
@@ -378,15 +483,12 @@ function updateCalculator() {
     const percent = parseInt(initialPercent.value);
     const months = parseInt(loanTerm.value);
 
-    // Boshlang'ich to'lov
     const downPayment = (carPrice * percent) / 100;
     const loanAmount = carPrice - downPayment;
 
-    // Yillik foiz stavkasi (taxminan 24% yillik)
     const annualRate = 0.24;
     const monthlyRate = annualRate / 12;
 
-    // Oylik to'lov formulasi (Annuitet)
     const monthlyPayment = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
 
     calcCarPriceDisplay.textContent = formatMoney(carPrice);
@@ -401,25 +503,17 @@ function orderLoanCall() {
     const selectedCar = gmCars.find(c => c.id === calcCarSelect.value) || gmCars[0];
     const userCarSelect = document.getElementById("userCar");
     if (userCarSelect) {
-        userCarSelect.value = selectedCar.name.replace("Chevrolet ", "").split(" ")[0];
+        userCarSelect.value = selectedCar.name;
     }
     window.location.hash = "contact";
 }
 
-// Lead form submit
 function handleLeadSubmit(event) {
     event.preventDefault();
-    const name = document.getElementById("userName").value;
-    const phone = document.getElementById("userPhone").value;
-    const car = document.getElementById("userCar").value;
-
     document.getElementById("leadForm").style.display = "none";
     document.getElementById("formSuccessMessage").style.display = "block";
-
-    console.log("Yangi buyurtma:", { name, phone, car });
 }
 
-// Mobil menyu
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
@@ -430,14 +524,12 @@ document.querySelectorAll(".nav-link").forEach(link => {
     });
 });
 
-// ESC tugmasi bosilganda modalni yopish
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         closeModal();
     }
 });
 
-// Dastlabki ishga tushirish
 document.addEventListener("DOMContentLoaded", () => {
     renderCars();
     initCalculator();
